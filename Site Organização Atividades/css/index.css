@@ -25,7 +25,7 @@
     height: 50px;
     background-color: burlywood;
     border: 3px solid rgb(83, 95, 109);
-    border-radius: 5px;
+    border-radius: 8px;
     align-self: auto;
     align-items: center;
 }
@@ -73,14 +73,67 @@
 /*HEAD*/
 
 /*BODY*/
-.body{
+body{
     width: 100%;
     height: 100dvh;
     background-color: rgb(129, 129, 129);
 }
-.difficultylevel{
- width: 100%;
+aside [class^="sidebar"] {
+    --sidebar-width: 20px; /* Default collapsed width */
+    --sidebar-width-expand: 100px; /* Expanded width on hover */
+    width: var(--sidebar-width); /* Use the default width */
+    height: 160px;
+    justify-content: flex-start;
+    align-items: flex-start;
+    background-color: rgb(83, 95, 109);
+    border: 3px solid rgb(113, 125, 139);
+    border-radius: 8px;
+    padding: 3px;
+    transition: width 0.3s ease-in-out, background-color 0.3s ease-in-out; /* Sync transitions */
 }
 
+aside .sidebar:hover {
+    width: var(--sidebar-width-expand); /* Expand the sidebar on hover */
+    background-color: rgba(83, 95, 109, 0.9); /* Optional hover background color */
+}
 
+aside [id^="selbtn"] {
+    display: flex;
+    width: var(--sidebar-width); /* Match the sidebar's width */
+    height: 50px;
+    background-color: burlywood;
+    border: 3px solid rgb(83, 95, 109);
+    border-radius: 8px;
+    align-self: auto;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 5px;
+    box-sizing: border-box;
+    overflow: hidden;
+    transition: width 0.3s ease-in-out, background-color 0.3s ease-in-out; /* Sync transitions */
+}
+aside [id^="selbtn"] p {
+    opacity: 0;
+    font-size: large;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    white-space: nowrap;
+    overflow: hidden;
+    margin: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+aside [class^="sidebar"]:hover [id^="selbtn"] {
+    width: var(--sidebar-width-expand);
+    background-color: rgba(222, 184, 135, 0.8);
+    opacity: 1;
+}
+aside [class^="sidebar"]:hover [id^="selbtn"] p {
+    opacity: 1;
+}
+aside [id^="selbtn"]:first-child:hover {
+    background-color: rgba(224, 94, 94, 0.8);
+}
+aside [id^="selbtn"]:last-child:hover {
+    background-color: rgba(131, 224, 94, 0.8);
+}
 /*BODY*/
