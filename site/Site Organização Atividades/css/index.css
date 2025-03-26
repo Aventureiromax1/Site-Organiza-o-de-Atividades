@@ -161,7 +161,7 @@ section .activity{
     flex-wrap: wrap;
     justify-content: flex-start;
 }
-section .activity [id] {
+section .activity > [id] {
     margin: 10px;
     width: 300px;
     max-width: 600px;
@@ -171,13 +171,16 @@ section .activity [id] {
     border-radius: 8px;
     border: 8px solid rgb(83, 95, 109);
     box-shadow: 8px rgb(83, 95, 109);
-
     justify-content: flex-start;
     align-items: center;
     position: relative;
     overflow: hidden;
 }
-section .activity [id]:hover{
+section .activity > [id] p {
+    z-index: 9999;
+    position: absolute;
+}
+section .activity > [id]:hover{
     scale: 1.05;
 }
 /*
