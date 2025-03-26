@@ -3,6 +3,9 @@
 body{
     user-select: none;
     cursor: pointer;
+    width: 100%;
+    height: 100dvh;
+    background-color: rgb(0, 0, 0);
 }
 
 .menu{
@@ -10,8 +13,8 @@ body{
 
     width: 100%;
     height: 75px;
-    background-color: lightslategrey;
-    border: 3px solid rgb(83, 95, 109);
+    background-color: rgb(68, 73, 78);
+    border: 3px solid rgb(48, 53, 58);
     padding: 0px;
     margin: 0px;
 }
@@ -31,38 +34,41 @@ body .container{
 }
 .home{
     width: 100px;
+    overflow: hidden;
     height: 50px;
     padding: 0%;
     border: 3px solid rgb(83, 95, 109);
     border-radius: 8px;
     user-select: none;
-    background-color: burlywood;
-    background-image: url("..img/house.png");
-    background-size: 2%; 
+    background-color: rgb(131, 131, 131);
     justify-content: center;
     align-self: auto;
     align-items: center;
-    transition: background 1s;
+    transition: all 1s;
+    opacity: 50%;
 }
 
-.home:hover{
-    transition: background 1s;
+.home:hover {
     background-color: white;
-    
+    transition: all 1s;
+    opacity: 100%;
 }
+
 .done {
     width: 100px;
     height: 50px;
-    background-color: burlywood;
+    background-color: rgb(173, 186, 194);
     border: 3px solid rgb(83, 95, 109);
     border-radius: 8px;
     align-self: auto;
     align-items: center;
     transition: background 1s;
+    opacity: 50%;
 }
 .done:hover{
     transition: background 1s;
-    background-color: rgba(148, 248, 90, 0.767);
+    background-color: rgb(73, 177, 33);
+    opacity: 100%;
 
 }
 .container h1{
@@ -71,20 +77,22 @@ body .container{
     font-size: fit-content;
 }
 .undone{
+    opacity: 50%;
     width: 100px;
     height: 50px;
-    background-color: burlywood;
+    background-color: rgb(173, 186, 194);
     border: 3px solid rgb(83, 95, 109);
-    border-radius: 5px;
+    opacity: 50%;
+    border-radius: 8px;
     align-self: auto;
     align-items: center;
     flex-wrap: wrap;
     transition: background 1s;
 }
 .undone:hover{
+    opacity: 100%;
     transition: background 1s;
-    background-color: rgb(250, 99, 99);
-
+    background-color: rgb(172, 43, 43);
 }
 .undone h1{
     text-align: center;
@@ -100,7 +108,7 @@ body .container{
     background-image: url("../img/house.png");
     background-size: 50px 50px;
     background-color: rgb(255, 255, 255);
-    border: 3px solid rgb(83, 95, 109);
+    border: 3px solid rgb(74, 78, 83);
     border-radius: 50%;
     transition: background 1s;
 }
@@ -111,11 +119,7 @@ body .container{
 /*HEAD*/
 
 /*BODY*/
-body{
-    width: 100%;
-    height: 100dvh;
-    background-color: rgb(129, 129, 129);
-}
+
 aside [class^="sidebar"] {
     --sidebar-width: 20px; /* Default collapsed width */
     --sidebar-width-expand: 100px; /* Expanded width on hover */
@@ -124,7 +128,7 @@ aside [class^="sidebar"] {
     user-select: none;
     justify-content: flex-start;
     align-items: flex-start;
-    background-color: rgb(83, 95, 109);
+    background-color: rgb(203, 207, 212);
     border: 3px solid rgb(113, 125, 139);
     border-radius: 8px;
     padding: 3px;
@@ -133,14 +137,14 @@ aside [class^="sidebar"] {
 
 aside .sidebar:hover {
     width: var(--sidebar-width-expand); /* Expand the sidebar on hover */
-    background-color: rgba(83, 95, 109, 0.9); /* Optional hover background color */
+    background-color: rgba(216, 220, 224, 0.9); /* Optional hover background color */
 }
 
 aside [id^="selbtn"] {
     display: flex;
     width: var(--sidebar-width); /* Match the sidebar's width */
     height: 50px;
-    background-color: burlywood;
+    background-color: rgb(83, 79, 79);
     border: 3px solid rgb(83, 95, 109);
     border-radius: 8px;
     align-self: auto;
@@ -163,7 +167,7 @@ aside [id^="selbtn"] p {
 
 aside [class^="sidebar"]:hover [id^="selbtn"] {
     width: var(--sidebar-width-expand);
-    background-color: rgba(222, 184, 135, 0.8);
+    background-color: rgba(143, 138, 138, 0.8);
     opacity: 1;
 }
 aside [class^="sidebar"]:hover [id^="selbtn"] p {
@@ -194,7 +198,8 @@ section .activity [id] {
     max-width: 600px;
     max-height: 200px;
     height: 100px; 
-    background-color: burlywood;
+    background-color: rgb(12, 9, 9);
+    color: white;
     border-radius: 8px;
     border: 0px solid rgb(83, 95, 109) ;
     box-shadow: 8px rgb(83, 95, 109);
@@ -208,6 +213,7 @@ section .activity [id] {
 
 section .activity [id]:hover{
     border: 8px solid rgb(83, 95, 109);
+    
     scale:1.1;
     transition: all 1s;
 }
@@ -219,6 +225,15 @@ section .activity #geography {
     background-repeat: no-repeat;
     background-position: right;
 }
+
+section .activity #history{
+    background-image: url("../img/h3.png");
+    background-size: 0.5%;
+    background-size: 40%; 
+    background-repeat: no-repeat;
+    background-position: right;
+}
+
 section .activity p{
     font-size: 300%;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
