@@ -1,4 +1,10 @@
 /*HEAD*/
+
+body{
+    user-select: none;
+    cursor: pointer;
+}
+
 .menu{
     display: block;
 
@@ -26,14 +32,23 @@ body .container{
 .home{
     width: 100px;
     height: 50px;
-    background-color: burlywood;
+    padding: 0%;
     border: 3px solid rgb(83, 95, 109);
     border-radius: 8px;
+    user-select: none;
+    background-color: burlywood;
+    background-image: url("..img/house.png");
+    background-size: 2%; 
+    justify-content: center;
     align-self: auto;
     align-items: center;
+    transition: background 1s;
 }
+
 .home:hover{
-    background-color: rgba(222, 184, 135, 0.767);
+    transition: background 1s;
+    background-color: white;
+    
 }
 .done {
     width: 100px;
@@ -43,9 +58,11 @@ body .container{
     border-radius: 8px;
     align-self: auto;
     align-items: center;
+    transition: background 1s;
 }
 .done:hover{
-    background-color: rgba(222, 184, 135, 0.767);
+    transition: background 1s;
+    background-color: rgba(148, 248, 90, 0.767);
 
 }
 .container h1{
@@ -56,15 +73,17 @@ body .container{
 .undone{
     width: 100px;
     height: 50px;
-    background-color: rgb(206, 222, 135);
+    background-color: burlywood;
     border: 3px solid rgb(83, 95, 109);
     border-radius: 5px;
     align-self: auto;
     align-items: center;
     flex-wrap: wrap;
+    transition: background 1s;
 }
 .undone:hover{
-    background-color: rgba(206, 222, 135, 0.74);
+    transition: background 1s;
+    background-color: rgb(250, 99, 99);
 
 }
 .undone h1{
@@ -78,12 +97,16 @@ body .container{
     right: 20px;
     width: 50px;
     height: 50px;
-    background-color: burlywood;
+    background-image: url("../img/house.png");
+    background-size: 50px 50px;
+    background-color: rgb(255, 255, 255);
     border: 3px solid rgb(83, 95, 109);
     border-radius: 50%;
+    transition: background 1s;
 }
 .profile:hover{
-    background-color: rgba(222, 184, 135, 0.678);
+    background-color: rgb(180, 178, 178);
+    transition: background 1s;
 }
 /*HEAD*/
 
@@ -98,6 +121,7 @@ aside [class^="sidebar"] {
     --sidebar-width-expand: 100px; /* Expanded width on hover */
     width: var(--sidebar-width); /* Use the default width */
     height: 160px;
+    user-select: none;
     justify-content: flex-start;
     align-items: flex-start;
     background-color: rgb(83, 95, 109);
@@ -151,6 +175,9 @@ aside [id^="selbtn"]:first-child:hover {
 aside [id^="selbtn"]:last-child:hover {
     background-color: rgba(131, 224, 94, 0.8);
 }
+aside [id^="selbtn"]:nth-child(2):hover{
+    background-color: rgba(252, 124, 5, 0.8);
+}
 
 /*Section*/
 section .activity{
@@ -160,6 +187,7 @@ section .activity{
     flex-wrap: wrap;
     justify-content: flex-start;
 }
+
 section .activity [id] {
     margin: 10px;
     width: 300px;
@@ -168,14 +196,23 @@ section .activity [id] {
     height: 100px; 
     background-color: burlywood;
     border-radius: 8px;
-    border: 8px solid rgb(83, 95, 109);
+    border: 0px solid rgb(83, 95, 109) ;
     box-shadow: 8px rgb(83, 95, 109);
     display: flex;
     justify-content: flex-start;
     align-items: center;
     position: relative;
     overflow: hidden;
+    transition: all 1s;
 }
+
+section .activity [id]:hover{
+    border: 8px solid rgb(83, 95, 109);
+    scale:1.1;
+    transition: all 1s;
+}
+
+
 section .activity #geography {
     background-image: url("../img/globe.gif");
     background-size: 50%; 
