@@ -89,6 +89,7 @@ body .container{
 
 /*BODY*/
 body{
+    user-select: none;
     width: 100%;
     height: 100dvh;
     background-color: rgb(129, 129, 129);
@@ -170,24 +171,15 @@ section .activity [id] {
     border-radius: 8px;
     border: 8px solid rgb(83, 95, 109);
     box-shadow: 8px rgb(83, 95, 109);
-    display: flex;
+
     justify-content: flex-start;
     align-items: center;
     position: relative;
     overflow: hidden;
 }
-section .activity #geography {
-    background-image: url("../img/globe.gif");
-    background-size: 50%; 
-    background-repeat: no-repeat;
-    background-position: right;
+section .activity [id]:hover{
+    scale: 1.05;
 }
-section .activity p{
-    font-size: 300%;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    margin: 20px;
-}
-
 /*
 section .activity #history .globe {
     position: absolute;

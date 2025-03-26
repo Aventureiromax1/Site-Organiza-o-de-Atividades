@@ -1,0 +1,33 @@
+/*geografia*/
+section .activity #geography {
+    background-image: url("../img/globe.gif");
+    background-size: 50%; 
+    background-repeat: no-repeat;
+    background-position: right;
+}
+section .activity p{
+    font-size: 300%;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    margin: 20px;
+}
+/*Geografia*/
+
+/*historia*/
+section .activity #history {
+}
+section .activity #history .hist-back{
+    width: 110%;
+    height: 5px;
+    display: flex;
+    position: absolute;
+    bottom: -10px;
+    left: -10px;
+    background-color: green;
+    margin: 10px auto;
+    justify-content: center;
+    align-items: center;
+     border-radius: 8px;
+}
+section .activity #history .castle [id]{
+    
+}
