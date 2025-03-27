@@ -258,6 +258,8 @@ section .activity #portuguese .book:first-child{
     position: absolute;
     right: 0px;
     rotate: -30deg;
+    animation: movingBook 150s linear infinite;
+    animation-delay: 2s;
 }
 section .activity #portuguese .book:nth-child(2){
     width: 100px;
@@ -275,19 +277,22 @@ section .activity #portuguese .book [id^="paper"]{
     height: 90%;
     position: absolute;
     border-left: 8px solid papayawhip;
-    border-radius: 8px 0px;
-    background: linear-gradient(to right, papayawhip,papayawhip,papayawhip, rgb(247, 191, 143));
+    border-radius: 8px 3px;
+    background: linear-gradient(to right, papayawhip,papayawhip,papayawhip,papayawhip,papayawhip,papayawhip,papayawhip, rgb(247, 191, 143) );
     overflow: hidden;
     padding: 5px;
+    left: -4px;
 }
 
 section .activity #portuguese .book #paper1{
     rotate: 180deg;
-    left: -8px;
-    border-radius: 0px 8px;
+    right: -2px;
+    border-radius: 3px 8px;
+    z-index: 1;
 }
 section .activity #portuguese .book #paper{
-    right: 0;
+    right: -1px;
+    z-index: 2;
 }
 section .activity #portuguese .book #text{
     font-size: 6px;
@@ -297,7 +302,22 @@ section .activity #portuguese .book:nth-child(1) #text{
     margin-right: 5px;
 }
 section .activity #portuguese .book:nth-child(2) #text{
+    position: absolute;
+    bottom: 5px;
     rotate: 180deg;
-    left: 5;
-    top: 100px;
+    margin-right: 16px;
+}
+@keyframes movingBook {
+    0%{
+        right: -400px;
+    }
+    3%{
+        right: 0px;
+    }
+    80%{
+        right: 0px;
+    }
+    100%{
+        right: 400px;
+    }
 }
