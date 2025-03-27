@@ -1,0 +1,303 @@
+/*geografia*/
+section .activity #geography {
+    background-image: url("../img/globe.gif");
+    background-size: 50%; 
+    background-repeat: no-repeat;
+    background-position: right;
+}
+section .activity p{
+    font-size: 300%;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    margin: 20px;
+}
+/*Geografia*/
+
+/*historia*/
+section .activity #history .castle .ground{
+    width: 50%;
+    height: 10px;
+    background-color: green;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 5;
+    border-top: 10px 0px solid green;
+    border-radius: 50% 50% 0 0; /* Creates a wave-like effect */
+}
+section .activity #history .hist-back{
+    width: 110%;
+    height: 5px;
+    display: flex;
+    position: absolute;
+    bottom: -10px;
+    left: -10px;
+    background-color: green;
+    margin: 10px auto;
+    justify-content: center;
+    align-items: center;
+     border-radius: 8px;
+     z-index: 2;
+}
+section .activity #history .castle > [id]{
+    background-color: gray;
+
+}
+section .activity #history .castle #castle-left{
+    width: 50px;
+    height: 75px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    border-left: 4px solid rgb(165, 165, 165);
+    border-right: 4px solid rgb(165, 165, 165);
+    z-index: 1;
+}
+section .activity #history .castle #castle-center{
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    bottom: 0;
+    right: 55px;
+    justify-content: center;
+    align-items: flex-end;
+}
+section .activity #history .castle #castle-center #backdoor{
+    width: 15px;
+    height: 30px;
+    background-color: #3f3f3f;
+    border: 5px solid #3f3f3f;
+    border-radius: 40% 40% 0 0;
+    position: absolute;
+    bottom: 0;
+    left: 25%;
+    justify-content: space-around;
+}
+section .activity #history .castle #castle-center #door{
+    width: 15px;
+    height: 30px;
+    background-color: #964500;
+    border: 5px solid #964500;
+    border-radius: 40% 40% 0 0;
+    position: absolute;
+    bottom: 0;
+    left: 25%;
+    justify-content: space-around;
+    animation: downdoor 40s infinite linear;
+    animation-delay: 10s;
+}
+section .activity #history .castle #castle-center #door #line{
+    width: 2px;
+    height: 44px;
+    background-color: #703400;
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+
+}
+section .activity #history .castle #castle-center #door #line2{
+    width: 2px;
+    height: 43px;
+    background-color: #703400;
+    position: absolute;
+    bottom: -10px;
+    left: 5%;
+
+}
+section .activity #history .castle #castle-center #door #line3{
+    width: 2px;
+    height: 41px;
+    background-color: #703400;
+    position: absolute;
+    bottom: -10px;
+    left: 95%;
+
+}
+
+@keyframes downdoor {
+    0%{
+        transform: translateY(0);
+    }
+    20%{
+        transform: translateY(50px);
+    }
+    40%{
+        transform: translateY(50px);
+    }
+    60%{
+        transform: translateY(0);
+    }
+    80%{ 
+        transform: translateY(0px);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+
+section .activity #history .castle #castle-right {
+    width: 50px;
+    height: 75px;
+    position: absolute;
+    bottom: 0;
+    right: 100px;
+    border-left: 4px solid rgb(165, 165, 165);
+    border-right: 4px solid rgb(165, 165, 165);
+    z-index: 1;
+}
+section .activity #history .castle #castle-top1{
+    background-color: gray;
+    width: 10px;
+    height: 8px;
+    border: 1px solid gray;
+    border-radius: 5px 5px 0 0;
+    top: -8px;
+    left: 10%;
+    position: absolute;
+
+}
+section .activity #history .castle #castle-top2{
+    background-color: gray;
+    width: 10px;
+    height: 8px;
+    border: 1px solid gray;
+    border-radius: 5px 5px 0 0;
+    top: -8px;
+    left: 40%;
+    position: absolute;
+    z-index: 1;
+}
+section .activity #history .castle #castle-top3{
+    background-color: gray;
+    width: 10px;
+    height: 8px;
+    border: 1px solid gray;
+    border-radius: 5px 5px 0 0;
+    top: -8px;
+    left: 70%;
+    position: absolute;
+}
+/*historia*/
+
+
+/*Matematica*/
+
+section .activity #math .math-back > [id]{
+    width: 50px;
+    height: 50px;
+    display: flex;
+    position: absolute;
+    background-color: rgb(255, 100, 0);
+    margin: 10px auto;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    z-index: 2;
+}
+section .activity #math .math-back :nth-child(1){
+    rotate: 30deg;
+    left: 0px;
+    bottom: -15px;
+    background-image: url(../img/mathsymbols/plus.svg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center;
+    background-position-y: 10%;
+    filter: invert();
+}
+section .activity #math .math-back :nth-child(2){
+    rotate: 10deg;
+    left: 170px;
+    top: -20px;
+    background-image: url(../img/mathsymbols/minus.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    filter: invert();
+}
+section .activity #math .math-back :nth-child(3){
+    rotate: -10deg;
+    left: 250px;
+    bottom: 0;
+    background-image: url(../img/mathsymbols/multiply.svg);
+    background-repeat: no-repeat;
+    background-size: 150%;
+    background-position: center;
+    background-position-y: 37%;
+    filter: invert();
+}
+section .activity #math .math-back :nth-child(4){
+    rotate: 60deg;
+    left: 60px;
+    top: 0;
+    background-image: url(../img/mathsymbols/division.svg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position-y:29%;
+    background-position-x: 1000%;
+    filter: invert();
+}
+
+section .activity #math .math-back [id] [id^="#element"]{
+    width: 30px;
+    height: 7px;
+    border-radius: 20%;
+    background-color: white;
+}
+
+
+/*Matematica*/
+
+/*Portugues*/
+
+section .activity #portuguese .book:first-child{
+    width: 100px;
+    height: 300px;
+    border: 5px solid #cf6100;
+    border-radius: 16px;
+    background-color: #964500;
+    position: absolute;
+    right: 0px;
+    rotate: -30deg;
+}
+section .activity #portuguese .book:nth-child(2){
+    width: 100px;
+    height: 300px;
+    border: 5px solid #cf6100;
+    border-radius: 16px;
+    background-color: #964500;
+    position: absolute;
+    right: -112px;
+    top: -5px;
+}
+section .activity #portuguese .book [id^="paper"]{
+    top: 5px;
+    width: 90%;
+    height: 90%;
+    position: absolute;
+    border-left: 8px solid papayawhip;
+    border-radius: 8px 0px;
+    background: linear-gradient(to right, papayawhip,papayawhip,papayawhip, rgb(247, 191, 143));
+    overflow: hidden;
+    padding: 5px;
+}
+
+section .activity #portuguese .book #paper1{
+    rotate: 180deg;
+    left: -8px;
+    border-radius: 0px 8px;
+}
+section .activity #portuguese .book #paper{
+    right: 0;
+}
+section .activity #portuguese .book #text{
+    font-size: 6px;
+    text-align: justify;
+}
+section .activity #portuguese .book:nth-child(1) #text{
+    margin-right: 5px;
+}
+section .activity #portuguese .book:nth-child(2) #text{
+    rotate: 180deg;
+    left: 5;
+    top: 100px;
+}
