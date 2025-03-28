@@ -175,13 +175,15 @@ section .activity > [id] {
     align-items: center;
     position: relative;
     overflow: hidden;
+    transition: 0.2s ease-in-out;
 }
 section .activity > [id] p {
     z-index: 9999;
     position: absolute;
 }
 section .activity > [id]:hover{
-    scale: 1.05;
+    transform: scale(1.05);
+    transition: transform 0.15s ease-in-out;
 }
 /*
 section .activity #history .globe {

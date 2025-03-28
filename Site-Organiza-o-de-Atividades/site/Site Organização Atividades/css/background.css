@@ -180,17 +180,12 @@ section .activity #history .castle #castle-top3{
 
 
 /*Matematica*/
-section .activity #math .math-back [id]:nth-child(1){
-    animation: fallingBlocks 4s linear infinite;
-}
-section .activity #math .math-back [id]:nth-child(2){
-    animation: fallingBlocks 5s linear infinite;
-}
-section .activity #math .math-back [id]:nth-child(3){
-    animation: fallingBlocks 3s linear infinite;
-}
-section .activity #math .math-back [id]:nth-child(4){
-    animation: fallingBlocks 3s linear infinite;
+
+section .activity #math .math-back > [id] {
+    animation: fallingBlocks var(--animationTime) linear infinite;
+    --animation-delay: 0s;
+    animation-delay: var(--animationDelay, 0s);
+    --randomPos: 0px;
 }
 
 section .activity #math .math-back > [id]{
@@ -199,13 +194,14 @@ section .activity #math .math-back > [id]{
     display: flex;
     position: absolute;
     background-color: rgb(255, 100, 0);
+    filter: invert();
     margin: 10px auto;
     justify-content: center;
     align-items: center;
     border-radius: 8px;
     z-index: 2;
 }
-section .activity #math .math-back :nth-child(1){
+section .activity #math .math-back [id^="plus"]{
     rotate: 30deg;
     left: 0px;
     bottom: -15px;
@@ -216,7 +212,7 @@ section .activity #math .math-back :nth-child(1){
     background-position-y: 10%;
     filter: invert();
 }
-section .activity #math .math-back :nth-child(2){
+section .activity #math .math-back [id^="minus"]{
     rotate: 10deg;
     left: 170px;
     top: -20px;
@@ -226,7 +222,7 @@ section .activity #math .math-back :nth-child(2){
     background-size: cover;
     filter: invert();
 }
-section .activity #math .math-back :nth-child(3){
+section .activity #math .math-back [id^="multiply"]{
     rotate: -10deg;
     left: 250px;
     bottom: 0;
@@ -237,7 +233,7 @@ section .activity #math .math-back :nth-child(3){
     background-position-y: 37%;
     filter: invert();
 }
-section .activity #math .math-back :nth-child(4){
+section .activity #math .math-back [id^="division"]{
     rotate: 10deg;
     left: 60px;
     top: 0;
@@ -255,14 +251,15 @@ section .activity #math .math-back [id] [id^="#element"]{
     border-radius: 20%;
     background-color: white;
 }
+
 @keyframes fallingBlocks {
     0% {
-        transform: translateY(-150px) rotate(0deg);
+        transform: translateX(var(--randomPos)) translateY(-300px) rotate(0deg);
     }
     100% {
-        transform: translateY(150px) rotate(360deg);
+        transform: translateX(var(--randomPos)) translateY(150px) rotate(360deg);
     }
-}  
+}
 
 /*Matematica*/
 
@@ -277,7 +274,10 @@ section .activity #portuguese .book:first-child{
     position: absolute;
     right: 0px;
     rotate: -30deg;
+    animation: movingBook 150s linear infinite;
+    animation-delay: 2s;
 }
+
 section .activity #portuguese .book:nth-child(2){
     width: 100px;
     height: 300px;
@@ -294,19 +294,22 @@ section .activity #portuguese .book [id^="paper"]{
     height: 90%;
     position: absolute;
     border-left: 8px solid papayawhip;
-    border-radius: 8px 0px;
-    background: linear-gradient(to right, papayawhip,papayawhip,papayawhip, rgb(247, 191, 143));
+    border-radius: 8px 3px;
+    background: linear-gradient(to right, papayawhip,papayawhip,papayawhip,papayawhip,papayawhip,papayawhip,papayawhip, rgb(247, 191, 143) );
     overflow: hidden;
     padding: 5px;
+    left: -4px;
 }
 
 section .activity #portuguese .book #paper1{
     rotate: 180deg;
-    left: -8px;
-    border-radius: 0px 8px;
+    right: -2px;
+    border-radius: 3px 8px;
+    z-index: 1;
 }
 section .activity #portuguese .book #paper{
-    right: 0;
+    right: -1px;
+    z-index: 2;
 }
 section .activity #portuguese .book #text{
     font-size: 6px;
@@ -316,7 +319,22 @@ section .activity #portuguese .book:nth-child(1) #text{
     margin-right: 5px;
 }
 section .activity #portuguese .book:nth-child(2) #text{
+    position: absolute;
+    bottom: 5px;
     rotate: 180deg;
-    left: 5;
-    top: 100px;
+    margin-right: 16px;
+}
+@keyframes movingBook {
+    0%{
+        right: -400px;
+    }
+    3%{
+        right: 0px;
+    }
+    80%{
+        right: 0px;
+    }
+    100%{
+        right: 400px;
+    }
 }
