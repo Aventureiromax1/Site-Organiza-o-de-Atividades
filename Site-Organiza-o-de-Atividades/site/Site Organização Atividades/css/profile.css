@@ -1,0 +1,39 @@
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10%;
+}
+main .usercard{
+    width: 300px;
+    height: 600px;
+    border-radius: 24px;
+    background-color: red;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+main .usercard img{
+    margin: 30px;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-color: white;
+}
+.userData{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+.userData [id^="user"]{
+    width: 70%;
+    height: 30px;
+    background-color: burlywood;
+    border-radius: 16px;
+    margin: 10px;
+}
+main .usercard p {
+    
+}
