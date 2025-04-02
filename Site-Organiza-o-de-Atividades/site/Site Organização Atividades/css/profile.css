@@ -13,7 +13,7 @@ main .usercard{
     align-items: center;
     justify-content: center;
     text-align: center;
-    background-color: rgba(255, 255, 255, 0.603);
+    background-color: #ffffff9a;
     box-shadow: 0 0 100px 2px rgba(0, 195, 255, 1);
     animation: startAnimation1 2s forwards, Phase_2 6s 2s infinite;
 }
@@ -22,6 +22,7 @@ main .usercard img{
     width: 200px;
     height: 200px;
     border-radius: 50%;
+    border: 4px solid rgb(151, 151, 151);
     background-image: url("../img/avatar.jpg");
     background-size: cover;
     background-position: center;
@@ -42,7 +43,7 @@ main .usercard img{
     font-size: 100%;
     padding: 0.8em;
     outline: none;
-    border: 2px solid rgb(151, 151, 151);
+    border: 2px solid #979797;
     background-color: transparent;
     border-radius: 20px;
     width: 100%;
@@ -65,7 +66,7 @@ main .usercard img{
     margin: 0em;
     margin-left: 1.3em;
     padding: 0.4em;
-    background-color: #e8e8e8;
+    background-color: #d8d8d8;
     border-radius: 8px;
   }
   .inputGroup :is(input:valid)~label{

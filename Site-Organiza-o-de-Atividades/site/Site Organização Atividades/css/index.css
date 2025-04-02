@@ -25,13 +25,14 @@ body .container{
     align-items: flex-start;
 }
 .home{
+    display: flex;
     width: 100px;
     height: 50px;
     background-color: burlywood;
     border: 3px solid rgb(83, 95, 109);
     border-radius: 8px;
-    align-self: auto;
     align-items: center;
+    justify-content: center;
 }
 .home button{
     height: 50px;
@@ -43,43 +44,30 @@ body .container{
 .home:hover{
     background-color: rgba(222, 184, 135, 0.767);
 }
-.done {
-    width: 100px;
-    height: 50px;
-    background-color: burlywood;
-    border: 3px solid rgb(83, 95, 109);
-    border-radius: 8px;
-    align-self: auto;
-    align-items: center;
-}
-.done:hover{
-    background-color: rgba(222, 184, 135, 0.767);
-
-}
 .container h1{
     text-align: center;
     margin: 0;
     font-size: fit-content;
 }
-.undone{
-    width: 100px;
+.SubjectsContents{
+    display: flex;
+    width: fit-content;
     height: 50px;
     background-color: rgb(206, 222, 135);
     border: 3px solid rgb(83, 95, 109);
     border-radius: 5px;
-    align-self: auto;
     align-items: center;
-    flex-wrap: wrap;
+    justify-content: center;
 }
-.undone:hover{
+.SubjectsContents:hover{
     background-color: rgba(206, 222, 135, 0.74);
 
 }
-.undone h1{
+.SubjectsContents h1{
     text-align: center;
     margin: 0;
     flex-wrap: nowrap;
-    font-size: 150%;
+    font-size: 32px;
 }
 .profile{
     position: absolute;
@@ -89,6 +77,10 @@ body .container{
     background-color: burlywood;
     border: 3px solid rgb(83, 95, 109);
     border-radius: 50%;
+    background-image: url(../img/userico.png);
+    background-size: 80%;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 .profile button{
     width: 50px;
@@ -99,6 +91,10 @@ body .container{
 }
 .profile:hover{
     background-color: rgba(222, 184, 135, 0.678);
+    
+}
+.profile img:hover{
+    filter: invert(100%);
 }
 /*HEADER*/
 
