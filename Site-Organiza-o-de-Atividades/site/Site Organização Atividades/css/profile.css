@@ -7,33 +7,71 @@ main{
 main .usercard{
     width: 300px;
     height: 600px;
-    border-radius: 24px;
+    border-radius: 64px;
     background-color: red;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     text-align: center;
+    background-color: rgba(255, 255, 255, 0.603);
+    box-shadow: 0 0 100px 2px rgba(0, 195, 255, 1);
+    animation: startAnimation1 2s forwards, Phase_2 6s 2s infinite;
 }
 main .usercard img{
     margin: 30px;
     width: 200px;
     height: 200px;
     border-radius: 50%;
-    background-color: white;
+    background-image: url("../img/avatar.jpg");
+    background-size: cover;
+    background-position: center;
 }
 .userData{
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
     align-items: center;
 }
-.userData [id^="user"]{
-    width: 70%;
-    height: 30px;
-    background-color: burlywood;
-    border-radius: 16px;
-    margin: 10px;
-}
-main .usercard p {
-    
-}
+.inputGroup {
+    font-family: 'Segoe UI', sans-serif;
+    margin: 1em 0 1em 0;
+    max-width: 190px;
+    position: relative;
+  }
+  
+  .inputGroup input {
+    font-size: 100%;
+    padding: 0.8em;
+    outline: none;
+    border: 2px solid rgb(151, 151, 151);
+    background-color: transparent;
+    border-radius: 20px;
+    width: 100%;
+  }
+  
+  .inputGroup label {
+    font-size: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    padding: 0.8em;
+    margin-left: 0.5em;
+    pointer-events: none;
+    transition: all 0.3s ease;
+    color: rgb(100, 100, 100);
+  }
+  
+  .inputGroup :is(input:focus)~label {
+    transform: translateY(-50%) scale(.9);
+    margin: 0em;
+    margin-left: 1.3em;
+    padding: 0.4em;
+    background-color: #e8e8e8;
+    border-radius: 8px;
+  }
+  .inputGroup :is(input:valid)~label{
+    opacity: 0;
+  }
+  
+  .inputGroup :is(input:focus) {
+    border-color: rgb(150, 150, 200);
+  }
