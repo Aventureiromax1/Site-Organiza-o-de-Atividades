@@ -1,3 +1,13 @@
+/*botaos*/
+section .activity button {
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+}
 /*geografia*/
 section .activity #geography {
     background-image: url("../img/globe.gif");

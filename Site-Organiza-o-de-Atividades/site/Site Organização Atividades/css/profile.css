@@ -76,3 +76,20 @@ main .usercard img{
   .inputGroup :is(input:focus) {
     border-color: rgb(150, 150, 200);
   }
+  .inputGroup a button{
+    font-size: 100%;
+    padding: 0.8em;
+    outline: none;
+    border: 2px solid #979797;
+    background-color: transparent;
+    border-radius: 20px;
+    width: 100%;
+  }
+  .inputGroup a button:hover{
+    background-color: #d8d8d8;
+    border-color: rgb(150, 150, 200);
+  }
+  .inputGroup input:valid ~ a button {
+    background-color: #a7ff91;
+    border-color: rgb(150, 150, 200);
+  }
