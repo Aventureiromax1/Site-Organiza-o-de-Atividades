@@ -3,7 +3,7 @@
     display: block;
 
     width: 100%;
-    height: 75px;
+    height: 68px;
     background-color: lightslategrey;
     border: 3px solid rgb(83, 95, 109);
     padding: 0px;
@@ -12,12 +12,10 @@
 
 .container{
     display: flex;
-    justify-content: center;
-    justify-content: space-between;
     justify-content: flex-start;
     align-items: center;
     box-sizing: border-box;
-    gap: 20px;
+    gap: 5px;
     padding: 6px;
     margin: auto;
 }
@@ -35,13 +33,26 @@ body .container{
     justify-content: center;
 }
 .home button{
+    position: absolute;
     height: 50px;
     width: 100px;
-    opacity: 0;
-    position: absolute;
+    opacity: 100;
     z-index: 9999;
-    left: 20px;
-    top: 20px;
+}
+.button{
+    position: absolute;
+    height: 50px;
+    width: 100px;
+    opacity: 100;
+    z-index: 9999;
+}
+.Pbutton{
+    position: absolute;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    opacity: 100;
+    z-index: 9999;
 }
 .home:hover{
     background-color: rgba(222, 184, 135, 0.767);
@@ -156,6 +167,7 @@ aside [class^="sidebar"]:hover [id^="selbtn"] {
     background-color: rgba(222, 184, 135, 0.8);
     opacity: 1;
 }
+
 aside [class^="sidebar"]:hover [id^="selbtn"] p {
     opacity: 1;
 }
@@ -164,6 +176,25 @@ aside [id^="selbtn"]:first-child:hover {
 }
 aside [id^="selbtn"]:last-child:hover {
     background-color: rgba(131, 224, 94, 0.8);
+}
+@media (min-width: 1152px) {
+    aside [class^="sidebar"] {
+        width: var(--sidebar-width-expand); /* Use the expanded width */
+    }
+    aside [id^="selbtn"] {
+        width: var(--sidebar-width-expand); /* Match the expanded sidebar width */
+    }
+    aside [class^="sidebar"] [id^="selbtn"] p {
+        opacity: 1;
+        
+    }
+    aside [id^="selbtn"]:first-child {
+        background-color: rgba(224, 94, 94, 0.8);
+    }
+    aside [id^="selbtn"]:last-child {
+        background-color: rgba(131, 224, 94, 0.8);
+
+    }
 }
 
 /*Section*/

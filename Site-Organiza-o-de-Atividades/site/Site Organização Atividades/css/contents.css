@@ -1,0 +1,32 @@
+@media (min-width: 1152px) {
+    aside {
+        width: 10rem;
+        height: 100vh;
+        background-color: rgb(206, 222, 135);
+    }
+    .tab{
+        width: 0;
+        height: 0;
+        opacity: 0;
+    }
+}
+@media (max-width: 1152px) {
+    .tab{
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background-color: burlywood;
+        opacity: 1;
+        background-image: url(../img/3bar.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 35px;
+    }
+    .tab button{
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        opacity: 0;
+    }
+    
+}
