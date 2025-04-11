@@ -90,18 +90,26 @@
                     <h4>Passo base do princípio da indução finita(PIF)</h4>
                     <p>n &Congruent; n<sup>p </sup>(mod p) vale para k, ou seja k &Congruent; k<sup>p </sup>(mod p) </p>
                     <h4>Passo indutivo</h4>
-                    <p>Temos que povar para k + 1 (de acordo com o método do PIF) logo presumimos que: p | k+1 - (k+1)<sup>p </sup> desse modo: k+1 -</p>
+                    <p>Temos que povar para k + 1 (de acordo com o método do PIF) logo presumimos que: p | k + 1 - (k + 1)<sup>p </sup>. Pois se vale para um K genérico e para um 
+                        K + 1 genérico, logo, vale para todos desse modo, utilizando numero binomial de newton temos: 
+                       p | k + 1 - 
                     &#8721;
                     <math xmlns="http://www.w3.org/1998/Math/MathML">
                         <mrow>
                           <mo>(</mo>
                           <mfrac linethickness="0">
-                            <mrow><mi>n</mi></mrow>
-                            <mrow><mi>k</mi></mrow>
+                            <mrow><mi>p</mi></mrow>
+                            <mrow><mi>i</mi></mrow>
                           </mfrac>
                           <mo>)</mo>
                         </mrow>
                     </math>
+                    k<sup>p-i </sup> &times; 1
+                    (para i variando de 0 a P) &rArr; p | k + 1 - [k<sup>p</sup> &times; 1<sup>0</sup> + ... + 
+                    k<sup>0</sup> &times; 1<sup>p</sup>] perceba que ao tirarmos k<sup>p</sup>  e o 1<sup>p</sup> dos colchetetes o seguinte ocorre:
+                    p | k + 1 - k<sup>p</sup> - 1<sup>p</sup> - [...] &rArr;<b> p | k - k<sup>p</sup></b> - [...]
+                    
+                </p>
                 </article>
             </div>
         </main>
