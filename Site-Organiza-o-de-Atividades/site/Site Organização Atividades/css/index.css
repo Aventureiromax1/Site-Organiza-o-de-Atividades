@@ -5,6 +5,38 @@ body{
     user-select: none;
     width: 100%;
     height: 100dvh;
+
+/*cores light theme*/
+
+    /*layout padrao*/
+        --bg-color: #9b9b9b;
+        --bg-navbar-1: #494949;
+        --bg-navbar-2: #000000;
+        --bd-nav: #30353a;
+    /*botoes*/
+        --bg-home: #deb887;
+        --bd-home-hover: #deb887c4;
+        --bd-default: #535f6d;
+        --bg-SubjectsBtn: #cede87;
+        --bg-subjectsBtn-hover: #cede87c4;
+    /*aside*/
+        --bd-aside: #717d8b;
+        --bd-aside-hover: #535f6de6;
+        --bg-aside-hover-red: #e05e5ecc;
+        --bg-aside-hover-green: #83e05ecc;
+    /*profile*/
+        --bg-usercard: #ffffff9a;
+        --bd-usercard: #979797;
+        /*textos*/
+            --input-lbl: #646464;
+            --input-bg: #d8d8d8;
+            --input-bd-hover: #9696c8;
+    /*conteudos*/
+        --bg-contents-aside-subjects: #727272;
+        --bg-contents-main: #dadada;
+}
+.dark{
+
 }
 nav{
     display: flex;
@@ -13,7 +45,7 @@ nav{
     width: 99%;
     height: 68px;
     background: linear-gradient(to left, #494949, #000000);
-    border: 3px solid rgb(48, 53, 58);
+    border: 3px solid #30353a;
     margin: 0px;
 }
 
@@ -34,8 +66,8 @@ body .container{
     display: flex;
     width: 100px;
     height: 50px;
-    background-color: burlywood;
-    border: 3px solid rgb(83, 95, 109);
+    background-color: #deb887;
+    border: 3px solid #535f6d;
     border-radius: 8px;
     align-items: center;
     justify-content: center;
@@ -79,8 +111,8 @@ body .container{
     display: flex;
     width: 152px;
     height: 50px;
-    background-color: rgb(206, 222, 135);
-    border: 3px solid rgb(83, 95, 109);
+    background-color: #cede87;
+    border: 3px solid #535f6d;
     border-radius: 5px;
     align-items: center;
     justify-content: center;
@@ -103,8 +135,8 @@ body .container{
     right: 20px;
     width: 50px;
     height: 50px;
-    background-color: burlywood;
-    border: 3px solid rgb(83, 95, 109);
+    background-color: #deb887;
+    border: 3px solid #535f6d;
     border-radius: 50%;
     background-image: url(../img/userico.png);
     background-size: 80%;
@@ -121,7 +153,7 @@ body .container{
     z-index: 9999;
 }
 .profile:hover{
-    background-color: rgba(222, 184, 135, 0.678);
+    background-color: #deb887ad;
     
 }
 .profile img:hover{
@@ -138,8 +170,8 @@ aside [class^="sidebar"] {
     height: 160px;
     justify-content: flex-start;
     align-items: flex-start;
-    background-color: rgb(83, 95, 109);
-    border: 3px solid rgb(113, 125, 139);
+    background-color: #535f6d;
+    border: 3px solid #717d8b;
     border-radius: 8px;
     padding: 3px;
     transition: width 0.3s ease-in-out, background-color 0.3s ease-in-out; /* Sync transitions */
@@ -147,15 +179,15 @@ aside [class^="sidebar"] {
 
 aside .sidebar:hover {
     width: var(--sidebar-width-expand); /* Expand the sidebar on hover */
-    background-color: rgba(83, 95, 109, 0.9); /* Optional hover background color */
+    background-color: #535f6de6; /* Optional hover background color */
 }
 
 aside [id^="selbtn"] {
     display: flex;
     width: var(--sidebar-width); /* Match the sidebar's width */
     height: 50px;
-    background-color: burlywood;
-    border: 3px solid rgb(83, 95, 109);
+    background-color: #deb887;
+    border: 3px solid #535f6d;
     border-radius: 8px;
     align-self: auto;
     align-items: center;
@@ -177,7 +209,7 @@ aside [id^="selbtn"] p {
 
 aside [class^="sidebar"]:hover [id^="selbtn"] {
     width: var(--sidebar-width-expand);
-    background-color: rgba(222, 184, 135, 0.8);
+    background-color: #deb887cc;
     opacity: 1;
 }
 
@@ -185,10 +217,10 @@ aside [class^="sidebar"]:hover [id^="selbtn"] p {
     opacity: 1;
 }
 aside [id^="selbtn"]:first-child:hover {
-    background-color: rgba(224, 94, 94, 0.8);
+    background-color: #e05e5ecc;
 }
 aside [id^="selbtn"]:last-child:hover {
-    background-color: rgba(131, 224, 94, 0.8);
+    background-color: #83e05ecc;
 }
 @media (min-width: 1152px) {
     aside [class^="sidebar"] {
@@ -202,10 +234,10 @@ aside [id^="selbtn"]:last-child:hover {
         
     }
     aside [id^="selbtn"]:first-child {
-        background-color: rgba(224, 94, 94, 0.8);
+        background-color: #e05c5ccc;
     }
     aside [id^="selbtn"]:last-child {
-        background-color: rgba(131, 224, 94, 0.8);
+        background-color: #83e05ecc;
 
     }
 }
@@ -224,10 +256,10 @@ section .activity > [id] {
     max-width: 600px;
     max-height: 200px;
     height: 100px; 
-    background-color: burlywood;
+    background-color: #deb887;
     border-radius: 8px;
-    border: 8px solid rgb(83, 95, 109);
-    box-shadow: 8px rgb(83, 95, 109);
+    border: 8px solid #535f6d;
+    box-shadow: 8px #535f6d;
     justify-content: flex-start;
     align-items: center;
     position: relative;

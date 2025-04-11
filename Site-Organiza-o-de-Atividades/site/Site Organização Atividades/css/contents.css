@@ -3,7 +3,7 @@
         display: flex;
         width: 10rem;
         height: 100dvh;
-        background-color: rgb(196, 196, 196);
+        background-color: #c4c4c4;
         padding: 8px;
         animation: forwards responsivityAnimationBar 0.5s;
     }
@@ -19,7 +19,7 @@
         width: 50px;
         height: 50px;
         border-radius: 50%;
-        background-color: burlywood;
+        background-color: #deb887;
         opacity: 1;
         background-image: url(../img/3bar.png);
         background-position: center;
@@ -82,7 +82,7 @@
     height: 50px;
     margin-top: 2px;
     margin-bottom: 2px;
-    background-color: rgb(114, 114, 114);
+    background-color: #727272;
     border-radius: 5px;
     justify-content: center;
     align-items: center;
@@ -119,7 +119,7 @@ main{
     border-radius: 5px;
     width: 100vw;
     height: 100dvh;
-    background-color: rgb(218, 218, 218);
+    background-color: #dadada;
 }
 
 
