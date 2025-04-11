@@ -14,8 +14,7 @@ main .usercard{
     justify-content: center;
     text-align: center;
     background-color: #ffffff9a;
-    box-shadow: 0 0 100px 2px rgba(0, 195, 255, 1);
-    animation: startAnimation1 2s forwards, Phase_2 6s 2s infinite;
+    transition: 1s;
 }
 main .usercard img{
     margin: 30px;
@@ -26,6 +25,11 @@ main .usercard img{
     background-image: url("../img/avatar.jpg");
     background-size: cover;
     background-position: center;
+}
+
+main .usercard:hover{
+  scale: 1.04;
+  box-shadow: 0 0 100px 2px rgba(0, 195, 255, 1);
 }
 .userData{
     display: flex;
@@ -60,7 +64,6 @@ main .usercard img{
     transition: all 0.3s ease;
     color: rgb(100, 100, 100);
   }
-  
   .inputGroup :is(input:focus)~label {
     transform: translateY(-50%) scale(.9);
     margin: 0em;

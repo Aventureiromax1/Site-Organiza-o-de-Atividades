@@ -1,12 +1,19 @@
-/*HEADER*/
-.menu{
-    display: block;
 
+/*HEADER*/
+body{
+    background: #9b9b9b;
+    user-select: none;
     width: 100%;
+    height: 100dvh;
+}
+nav{
+    display: flex;
+    flex-direction: row;
+    display: block;
+    width: 99%;
     height: 68px;
-    background-color: lightslategrey;
-    border: 3px solid rgb(83, 95, 109);
-    padding: 0px;
+    background: linear-gradient(to left, #494949, #000000);
+    border: 3px solid rgb(48, 53, 58);
     margin: 0px;
 }
 
@@ -19,6 +26,7 @@
     padding: 6px;
     margin: auto;
 }
+
 body .container{
     align-items: flex-start;
 }
@@ -31,6 +39,9 @@ body .container{
     border-radius: 8px;
     align-items: center;
     justify-content: center;
+    animation-name: startAnimation1;
+    animation-duration: 0.5s;
+    overflow: hidden;
 }
 .home button{
     position: absolute;
@@ -45,6 +56,7 @@ body .container{
     width: 100px;
     opacity: 100;
     z-index: 9999;
+    cursor: pointer;
 }
 .Pbutton{
     position: absolute;
@@ -53,6 +65,7 @@ body .container{
     border-radius: 50%;
     opacity: 100;
     z-index: 9999;
+    cursor: pointer;
 }
 .home:hover{
     background-color: rgba(222, 184, 135, 0.767);
@@ -64,13 +77,16 @@ body .container{
 }
 .SubjectsContents{
     display: flex;
-    width: fit-content;
+    width: 152px;
     height: 50px;
     background-color: rgb(206, 222, 135);
     border: 3px solid rgb(83, 95, 109);
     border-radius: 5px;
     align-items: center;
     justify-content: center;
+    animation-name: startAnimation1;
+    animation-duration: 0.5s;
+    overflow: hidden;
 }
 .SubjectsContents:hover{
     background-color: rgba(206, 222, 135, 0.74);
@@ -94,6 +110,8 @@ body .container{
     background-size: 80%;
     background-position: center;
     background-repeat: no-repeat;
+    animation-name: startAnimation1;
+    animation-duration: 0.5s;
 }
 .profile button{
     width: 50px;
@@ -112,12 +130,7 @@ body .container{
 /*HEADER*/
 
 /*BODY*/
-body{
-    user-select: none;
-    width: 100%;
-    height: 100dvh;
-    background-color: rgb(129, 129, 129);
-}
+
 aside [class^="sidebar"] {
     --sidebar-width: 20px; /* Default collapsed width */
     --sidebar-width-expand: 100px; /* Expanded width on hover */
@@ -229,3 +242,16 @@ section .activity > [id]:hover{
     transform: scale(1.05);
     transition: transform 0.15s ease-in-out;
 }
+
+@keyframes startAnimation1 {
+    from{
+        opacity: 0;
+        width: 0px;
+    }
+    to{
+
+    }
+}
+
+
+

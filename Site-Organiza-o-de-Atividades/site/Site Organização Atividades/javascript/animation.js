@@ -1,26 +1,4 @@
-/*
-const elements = document.querySelectorAll('#math .math-back > [id]');
 
-if (elements.length === 0) {
-    console.error("Nenhum elemento foi encontrado com o seletor '#math .math-back [id]'.");
-} else {
-    console.log(`Foram encontrados ${elements.length} elementos.`);
-}
-
-elements.forEach((element, index) => {
-    const animationTime = `${Math.floor(Math.random() * 3)+1}s`;
-    element.style.setProperty('--animationTime', animationTime);
-
-    console.log(`Elemento ${index + 1} - Tempo de animação gerado: ${animationTime}`);
-
-    setInterval(() => {
-        const animationTime = `${Math.floor(Math.random() * 3)+2}s`;
-        const randomPos = (Math.floor(Math.random() * 32) - 16) * 10;
-        element.style.setProperty('--randomPos', `${randomPos}px`);
-        console.log(`Elemento ${index + 1} - Tempo de animação gerado: ${animationTime}`);
-        // console.log(`Elemento ${index + 1} - Nova posição X: ${randomPos}px`);
-    }, parseFloat(animationTime) * 1000);
-});*/
 // Seleciona todos os elementos que possuem animações
 // Seleciona todos os elementos que possuem animações
 const elements = document.querySelectorAll('#math .math-back > [id]');
