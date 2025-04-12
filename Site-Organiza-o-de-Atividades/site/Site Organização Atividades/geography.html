@@ -9,6 +9,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Organização de Atividades</title>
+    <script>
+        const theme = window.localStorage.getItem("theme");
+        if (theme === "dark") {
+          document.documentElement.classList.add("dark");
+        }
+      </script>
 </head>
 <body>
     <nav>
@@ -25,30 +31,29 @@
             </div>
         </div>
     </nav>
-    <div class="container">
+    <div class = "container">
         <aside>
             <div class="subjects">
                 <div id="geography">
-                    <p>Geografia</p>
-                    <a href="geography.html"></a>
+                    <a href="geography.html"><p>Geografia</p></a>
                 </div>
                 <div id="history">
-                    <p>História</p>
-                    <a href="history.html"></a>
+                    
+                    <a href="history.html"><p>História</p></a>
                 </div>
                 <div id="math">
-                    <p>Matemática</p>
-                    <a href="math.html"></a>
+                    
+                    <a href="math.html"><p>Matemática</p></a>
                 </div>
                 <div id="portuguese">
-                    <p>Português</p>
-                    <a href="portuguese.html"></a>
+                    
+                    <a href="portuguese.html"><p>Português</p></a>
                 </div>
             </div>
         </aside>
         <main>
-            <div id="contents">
-
+            <div class="contents">
+                
             </div>
         </main>
     </div>

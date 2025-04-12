@@ -1,10 +1,11 @@
-
+@import url(https://db.onlinewebfonts.com/c/d9d77150b3dda1eea88a7a8f979e7711?family=DM+Sans+Regular);
 /*HEADER*/
 body{
-    background: #9b9b9b;
+    background-color: var(--bg-color);
     user-select: none;
     width: 100%;
     height: 100dvh;
+    font-family: "DM Sans Regular";
 
 /*cores light theme*/
 
@@ -13,6 +14,7 @@ body{
         --bg-navbar-1: #494949;
         --bg-navbar-2: #000000;
         --bd-nav: #30353a;
+        --text-color: #000000;
     /*botoes*/
         --bg-home: #deb887;
         --bd-home-hover: #deb887c4;
@@ -20,6 +22,7 @@ body{
         --bg-SubjectsBtn: #cede87;
         --bg-subjectsBtn-hover: #cede87c4;
     /*aside*/
+        --bg-aside: #c4c4c4;
         --bd-aside: #717d8b;
         --bd-aside-hover: #535f6de6;
         --bg-aside-hover-red: #e05e5ecc;
@@ -36,7 +39,39 @@ body{
         --bg-contents-main: #dadada;
 }
 .dark{
+    /* layout padrão */
+    --bg-color: #1e1e1e;
+    --bg-navbar-1: #2c2c2c;
+    --bg-navbar-2: #121212;
+    --bd-nav: #333840;
+    --text-color: #e1e1e1;
 
+    /* botões */
+    --bg-home: #a97444;
+    --bg-home-hover: #a97444cc;
+    --bd-default: #6c6c6c;
+    --bg-SubjectsBtn: #9aa64c;
+    --bg-subjectsBtn-hover: #9aa64ccc;
+
+    /* aside */
+    --bg-aside: #2a2a2a;
+    --bd-aside: #444c56;
+    --bd-aside-hover: #6c6c6ce6;
+    --bg-aside-hover-red: #c94c4ccc;
+    --bg-aside-hover-green: #5fc94ccc;
+
+    /* profile */
+    --bg-usercard: #2e2e2e99;
+    --bd-usercard: #5a5a5a;
+
+    /* textos */
+    --input-lbl: #c0c0c0;
+    --input-bg: #3a3a3a;
+    --input-bd-hover: #6d6db8;
+
+    /* conteúdos */
+    --bg-contents-aside-subjects: #3b3b3b;
+    --bg-contents-main: #2f2f2f;
 }
 nav{
     display: flex;
@@ -44,8 +79,8 @@ nav{
     display: block;
     width: 99%;
     height: 68px;
-    background: linear-gradient(to left, #494949, #000000);
-    border: 3px solid #30353a;
+    background: linear-gradient(to left, var(--bg-navbar-1), var(--bg-navbar-2));
+    border: 3px solid var(--bd-nav);
     margin: 0px;
 }
 
@@ -66,8 +101,8 @@ body .container{
     display: flex;
     width: 100px;
     height: 50px;
-    background-color: #deb887;
-    border: 3px solid #535f6d;
+    background-color: var(--bg-home);
+    border: 3px solid var(--bd-default);
     border-radius: 8px;
     align-items: center;
     justify-content: center;
@@ -100,19 +135,19 @@ body .container{
     cursor: pointer;
 }
 .home:hover{
-    background-color: rgba(222, 184, 135, 0.767);
+    background-color: var(--bd-home-hover);
 }
 .container h1{
     text-align: center;
     margin: 0;
-    font-size: fit-content;
+    font-size: 25px;
 }
 .SubjectsContents{
     display: flex;
     width: 152px;
     height: 50px;
-    background-color: #cede87;
-    border: 3px solid #535f6d;
+    background-color: var(--bg-SubjectsBtn);
+    border: 3px solid var(--bd-default);
     border-radius: 5px;
     align-items: center;
     justify-content: center;
@@ -120,23 +155,25 @@ body .container{
     animation-duration: 0.5s;
     overflow: hidden;
 }
+
 .SubjectsContents:hover{
-    background-color: rgba(206, 222, 135, 0.74);
+    background-color: var(--bg-subjectsBtn-hover);
 
 }
+
 .SubjectsContents h1{
     text-align: center;
     margin: 0;
     flex-wrap: nowrap;
-    font-size: 32px;
 }
+
 .profile{
     position: absolute;
     right: 20px;
     width: 50px;
     height: 50px;
-    background-color: #deb887;
-    border: 3px solid #535f6d;
+    background-color: var(--bg-home);
+    border: 3px solid var(--bd-default);
     border-radius: 50%;
     background-image: url(../img/userico.png);
     background-size: 80%;
@@ -145,6 +182,7 @@ body .container{
     animation-name: startAnimation1;
     animation-duration: 0.5s;
 }
+
 .profile button{
     width: 50px;
     height: 50px;
@@ -152,10 +190,12 @@ body .container{
     opacity: 0.1;
     z-index: 9999;
 }
+
 .profile:hover{
-    background-color: #deb887ad;
+    background-color: var(--bd-home-hover);
     
 }
+
 .profile img:hover{
     filter: invert(100%);
 }
@@ -168,10 +208,11 @@ aside [class^="sidebar"] {
     --sidebar-width-expand: 100px; /* Expanded width on hover */
     width: var(--sidebar-width); /* Use the default width */
     height: 160px;
+    user-select: none;
     justify-content: flex-start;
     align-items: flex-start;
-    background-color: #535f6d;
-    border: 3px solid #717d8b;
+    background-color: rgb(0, 0, 0);
+    border: 3px solid rgb(87, 90, 94);
     border-radius: 8px;
     padding: 3px;
     transition: width 0.3s ease-in-out, background-color 0.3s ease-in-out; /* Sync transitions */
@@ -179,15 +220,15 @@ aside [class^="sidebar"] {
 
 aside .sidebar:hover {
     width: var(--sidebar-width-expand); /* Expand the sidebar on hover */
-    background-color: #535f6de6; /* Optional hover background color */
+    background-color: white; /* Optional hover background color */
 }
 
 aside [id^="selbtn"] {
     display: flex;
     width: var(--sidebar-width); /* Match the sidebar's width */
     height: 50px;
-    background-color: #deb887;
-    border: 3px solid #535f6d;
+    background-color: rgb(189, 189, 189);
+    border: 3px solid rgb(83, 95, 109);
     border-radius: 8px;
     align-self: auto;
     align-items: center;
@@ -197,10 +238,10 @@ aside [id^="selbtn"] {
     overflow: hidden;
     transition: width 0.3s ease-in-out, background-color 0.3s ease-in-out; /* Sync transitions */
 }
+
 aside [id^="selbtn"] p {
     opacity: 0;
-    font-size: large;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-weight: bold;
     white-space: nowrap;
     overflow: hidden;
     margin: 0;
@@ -209,19 +250,22 @@ aside [id^="selbtn"] p {
 
 aside [class^="sidebar"]:hover [id^="selbtn"] {
     width: var(--sidebar-width-expand);
-    background-color: #deb887cc;
+    background-color: rgba(143, 138, 138, 0.8);
     opacity: 1;
 }
-
 aside [class^="sidebar"]:hover [id^="selbtn"] p {
     opacity: 1;
 }
 aside [id^="selbtn"]:first-child:hover {
-    background-color: #e05e5ecc;
+    background-color: rgba(224, 94, 94, 0.8);
 }
 aside [id^="selbtn"]:last-child:hover {
-    background-color: #83e05ecc;
+    background-color: rgba(131, 224, 94, 0.8);
 }
+aside [id^="selbtn"]:nth-child(2):hover{
+    background-color: rgba(252, 124, 5, 0.8);
+}
+
 @media (min-width: 1152px) {
     aside [class^="sidebar"] {
         width: var(--sidebar-width-expand); /* Use the expanded width */
@@ -234,10 +278,10 @@ aside [id^="selbtn"]:last-child:hover {
         
     }
     aside [id^="selbtn"]:first-child {
-        background-color: #e05c5ccc;
+        background-color: var(--bg-aside-hover-red);
     }
     aside [id^="selbtn"]:last-child {
-        background-color: #83e05ecc;
+        background-color: var(--bg-aside-hover-green);
 
     }
 }
@@ -250,29 +294,39 @@ section .activity{
     flex-wrap: wrap;
     justify-content: flex-start;
 }
+
 section .activity > [id] {
     margin: 10px;
     width: 300px;
     max-width: 600px;
     max-height: 200px;
     height: 100px; 
-    background-color: #deb887;
-    border-radius: 8px;
-    border: 8px solid #535f6d;
-    box-shadow: 8px #535f6d;
+    background-color: var(--bg-home);
+    box-shadow: 8px var(--bd-default);
+    border: 4px solid var(--bd-default);
+    border-radius: 4px;
     justify-content: flex-start;
     align-items: center;
     position: relative;
     overflow: hidden;
     transition: 0.2s ease-in-out;
 }
+
 section .activity > [id] p {
     z-index: 9999;
     position: absolute;
 }
+
 section .activity > [id]:hover{
-    transform: scale(1.05);
-    transition: transform 0.15s ease-in-out;
+    border-radius: 8px;
+    border: 8px solid var(--bd-default);
+    scale: 1.1;
+}
+section .activity > [id] a{
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    background-color: turquoise;
 }
 
 @keyframes startAnimation1 {

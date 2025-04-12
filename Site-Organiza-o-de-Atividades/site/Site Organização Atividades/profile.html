@@ -2,10 +2,16 @@
 <html lang="en">
 
 <head>
+    <script>
+        const theme = window.localStorage.getItem("theme");
+        if (theme === "dark") {
+          document.documentElement.classList.add("dark");
+        }
+      </script>
     <link rel="stylesheet" href="./css/profile.css">
     <link rel="stylesheet" href="./css/index.css">
     <link rel="stylesheet" href="./css/background.css">
-    <script src="./javascript/index.js"></script>
+    <script src="./javascript/index.js" defer></script>
     <script src="./javascript/animation.js" defer></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -46,7 +52,7 @@
                     </div>
                     <div class="darkThemeBtn">
                         <label class="switch">
-                            <input id="input" type="checkbox" checked="darkTheme" onchange="DarkThemeToggled()"/>
+                            <input id="input" type="checkbox" checked="darkTheme" onchange="themeToggle()"/>
                             <div class="slider round">
                                 <div class="sun-moon">
                                     <svg id="moon-dot-1" class="moon-dot" viewBox="0 0 100 100">

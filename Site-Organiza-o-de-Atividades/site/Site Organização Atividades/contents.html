@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="./css/contents.css">
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/background.css">
+    <script src="./javascript/index.js"></script>
+    <script src="./javascript/contents.js" defer></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Organização de Atividades</title>
+    <script>
+        const theme = window.localStorage.getItem("theme");
+        if (theme === "dark") {
+          document.documentElement.classList.add("dark");
+        }
+      </script>
+</head>
+<body>
+    <nav>
+        <div class="container">
+            <div class="tab">
+                <button type="button" onclick="toggleAside()"></button>
+            </div>
+            <div class="home">
+                <a href="index.html" class="button"></a>
+                <h1>home</h1>
+            </div>
+            <div class="profile">
+                <a href="profile.html" class="Pbutton"></a>
+            </div>
+        </div>
+    </nav>
+    <div class = "container">
+        <main>
+            <div class="contents">
+                <div class = "iframeSubject">
+                    <div class = "iframeSubjectBar"></div>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+<footer>
+</footer>
+</html>

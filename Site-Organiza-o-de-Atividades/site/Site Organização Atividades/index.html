@@ -1,6 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <script>
+        const theme = window.localStorage.getItem("theme");
+        if (theme === "dark") {
+          document.documentElement.classList.add("dark");
+        }
+      </script>
     <link rel="stylesheet" href="./css/index.css">
     <link rel="stylesheet" href="./css/background.css">
     <script src="./javascript/index.js"></script>
@@ -17,7 +23,8 @@
                     <h1>home</h1>
                 </div>
                 <div class="SubjectsContents">
-                    <h1>Conteudos</h1>
+                    <h1>Conteúdos</h1>
+                    <a href="contents.html" class="button"></a>
                 </div>
                 <div class="profile">
                     <a href="profile.html" class="Pbutton"></a>
@@ -80,8 +87,8 @@
                         </div>
                         <div class="ground"></div>
                     </div>
-                    <a href="history.html"><button></button></a>
                     <p>História</p>
+                    <a href="history.html"><button></button></a>
                 </div>
                     <div id="math">
                         <div class="math-back">
@@ -119,9 +126,9 @@
                             </div>
                         </div>
                     </div>
-                    <a href="portuguese.html"><button></button></a>
                 </div>
                 <p>Português</p>
+                <a href="portuguese.html"><button></button></a>
                 <!--
                 <div id="subject">
                     <a href=""><button></button></a>

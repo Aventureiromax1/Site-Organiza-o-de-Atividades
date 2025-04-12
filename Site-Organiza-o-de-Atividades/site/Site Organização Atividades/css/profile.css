@@ -7,6 +7,7 @@ body{
 }
 
 main{
+    background-color: var(--bg-color);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -21,7 +22,7 @@ main .usercard{
     justify-content: center;
     text-align: center;
     display: flex;
-    background-color: #ffffff9a;
+    background-color: var(--bg-usercard);
     transition: 1s;
 }
 main .usercard > img{
@@ -29,7 +30,7 @@ main .usercard > img{
     width: 200px;
     height: 200px;
     border-radius: 50%;
-    border: 4px solid #979797;
+    border: 4px solid var(--bd-usercard);
     background-image: url("../img/avatar.jpg");
     background-size: cover;
     background-position: center;
@@ -58,7 +59,7 @@ main .usercard:hover{
     font-size: 100%;
     padding: 0.8em;
     outline: none;
-    border: 2px solid #979797;
+    border: 2px solid var(--bd-usercard);
     background-color: transparent;
     border-radius: 20px;
     width: 86%;
@@ -73,14 +74,14 @@ main .usercard:hover{
     margin-left: 0.5em;
     pointer-events: none;
     transition: all 0.3s ease;
-    color: #646464;
+    color: var(--input-lbl);
   }
   .inputGroup :is(input:focus)~label {
     transform: translateY(-50%) scale(.9);
     margin: 0em;
     margin-left: 1.3em;
     padding: 0.4em;
-    background-color: #d8d8d8;
+    background-color: var(--input-bg);
     border-radius: 8px;
   }
   .inputGroup :is(input:valid)~label{
@@ -88,24 +89,25 @@ main .usercard:hover{
   }
   
   .inputGroup :is(input:focus) {
-    border-color: #9696c8;
+    border-color: var(--input-bd-hover);
   }
   .inputGroup a button{
     font-size: 100%;
     padding: 0.8em;
     outline: none;
-    border: 2px solid #979797;
+    border: 2px solid var(--bd-usercard);
     background-color: transparent;
     border-radius: 20px;
     width: 100px;
+    color: var(--input-lbl);
   }
   .inputGroup a button:hover{
-    background-color: #d8d8d8;
-    border-color: #9696c8;
+    background-color: var(--bg-usercard);
+    border-color: var(--input-bd-hover);
   }
   .inputGroup input:valid ~ button:enabled {
     background-color: #a7ff91;
-    border-color: #9696c8;
+    border-color: var(--input-bd-hover)
   }
   .Pbottom{
     display: flex;
