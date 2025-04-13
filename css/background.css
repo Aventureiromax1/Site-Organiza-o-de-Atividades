@@ -61,6 +61,9 @@ section .activity #history .Sun-moon {
     background-color: var(--sun-color);
     position: absolute;
 }
+section .activity #history .Sun-moon{
+    box-shadow: yellow 0px 0px 30px;
+}
 
 .dark section .activity #history .Sun-moon {
     background-image: url(../img/moon.png);
@@ -69,6 +72,7 @@ section .activity #history .Sun-moon {
     background-position: center;
     background-color: var(--moon-color);
     text-shadow: white;
+    box-shadow: white 0px 0px 20px;
 }
 section .activity #history .castle > [id]{
     background-color: gray;
