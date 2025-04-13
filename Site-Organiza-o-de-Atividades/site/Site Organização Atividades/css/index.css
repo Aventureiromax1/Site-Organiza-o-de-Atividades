@@ -27,6 +27,8 @@ body{
         --bd-aside-hover: #535f6de6;
         --bg-aside-hover-red: #e05e5ecc;
         --bg-aside-hover-green: #83e05ecc;
+    /*activity*/
+        --bg-activities: #deb887;
     /*profile*/
         --bg-usercard: #ffffff9a;
         --bd-usercard: #979797;
@@ -34,9 +36,14 @@ body{
             --input-lbl: #646464;
             --input-bg: #d8d8d8;
             --input-bd-hover: #9696c8;
+            --text-color-img: #777;
+            --text-color-h1: #002147;
+            --text-color-h2: #004080;
     /*conteudos*/
         --bg-contents-aside-subjects: #727272;
         --bg-contents-main: #dadada;
+    /*materias bg*/
+        --sun-color: #ffe02f;
 }
 .dark{
     /* layout padrão */
@@ -60,6 +67,9 @@ body{
     --bg-aside-hover-red: #c94c4ccc;
     --bg-aside-hover-green: #5fc94ccc;
 
+    /*activity*/
+    --bg-activities: #002147;
+
     /* profile */
     --bg-usercard: #2e2e2e99;
     --bd-usercard: #5a5a5a;
@@ -68,10 +78,15 @@ body{
     --input-lbl: #c0c0c0;
     --input-bg: #3a3a3a;
     --input-bd-hover: #6d6db8;
+    --text-color-img: #777;
+    --text-color-h1: #1f6be7;
+    --text-color-h2: #709cd1;
 
     /* conteúdos */
     --bg-contents-aside-subjects: #3b3b3b;
     --bg-contents-main: #2f2f2f;
+    /*materias bg*/
+     --sun-color: #c5c5c5;
 }
 nav{
     display: flex;
@@ -311,10 +326,18 @@ section .activity > [id] {
     overflow: hidden;
     transition: 0.2s ease-in-out;
 }
+section .activity > [id] {
+    background-color: #002147;
+}
 
 section .activity > [id] p {
     z-index: 9999;
     position: absolute;
+}
+.dark section .activity [id] p {
+    color: var(--text-color);
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: #000;
 }
 
 section .activity > [id]:hover{

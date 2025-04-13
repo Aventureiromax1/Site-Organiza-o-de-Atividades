@@ -1,4 +1,7 @@
 /*botaos*/
+section .activity [id]{
+    background-color: var(--bg-activities);
+}
 section .activity button {
     display: flex;
     position: absolute;
@@ -48,6 +51,24 @@ section .activity #history .hist-back{
     align-items: center;
      border-radius: 8px;
      z-index: 2;
+}
+section .activity #history .Sun-moon {
+    left: 10px;
+    top: -110px;
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    background-color: var(--sun-color);
+    position: absolute;
+}
+
+.dark section .activity #history .Sun-moon {
+    background-image: url(../img/moon.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: var(--moon-color);
+    text-shadow: white;
 }
 section .activity #history .castle > [id]{
     background-color: gray;

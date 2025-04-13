@@ -171,7 +171,7 @@ main {
     margin: 20px;
     border-radius: 5px;
     width: 100vw;
-    background-color: rgb(218, 218, 218);
+    background-color: var(--bg-contents-main);
 }
 
 /* PÁGINA CONTENTS */
@@ -210,7 +210,7 @@ main {
 
 #history-content {
     font-family: "Arial", sans-serif;
-    color: #333;
+    color: var(--text-color);
     margin: 0;
     padding: 0;
     line-height: 1.6;
@@ -229,18 +229,18 @@ main {
 }
 
 #history-content header h1 {
-    color: #002147;
+    color: var(--text-color-h1);
     font-size: 2.5rem;
     margin-bottom: 5px;
 }
 
 #history-content header p {
     font-size: 0.9rem;
-    color: #666;
+    color: var(--text-color);
 }
 
 #history-content nav {
-    background: #e3e3e3;
+    background: var(--bg-contents-main);
     padding: 15px;
     margin-bottom: 30px;
     height: auto;
@@ -249,7 +249,7 @@ main {
 #history-content nav a {
     margin: 0 10px;
     text-decoration: none;
-    color: #002147;
+    color: var(--text-color-h2);
     font-weight: bold;
 }
 
@@ -262,14 +262,14 @@ main {
 }
 
 #history-content h2 {
-    color: #004080;
+    color: var(--text-color-h2);
     margin-top: 30px;
     border-bottom: 2px solid #ddd;
     padding-bottom: 10px;
 }
 
 #history-content h3 {
-    color: #00509e;
+    color: var(--text-color-h1);
     margin-top: 25px;
 }
 
@@ -296,13 +296,13 @@ main {
 
 #history-content figcaption {
     font-size: 0.9rem;
-    color: #555;
+    color: var(--text-color-img);
     margin-top: 5px;
 }
 
 #history-content footer p {
     font-size: 0.8rem;
-    color: #777;
+    color: var(--text-color-img);
 }
 
 /**portugues**/
@@ -313,7 +313,7 @@ main {
 
 #portuguese-content {
     font-family: "Arial", sans-serif;
-    color: #333;
+    color: var(--text-color);
     margin: 0;
     padding: 0;
     line-height: 1.6;
@@ -332,18 +332,18 @@ main {
 }
 
 #portuguese-content header h1 {
-    color: #002147;
+    color: var(--text-color-h1);
     font-size: 2.5rem;
     margin-bottom: 5px;
 }
 
 #portuguese-content header p {
     font-size: 0.9rem;
-    color: #666;
+    color: var(--text-color-img);
 }
 
 #portuguese-content nav {
-    background: #e3e3e3;
+    background: var(--bg-contents-main);
     padding: 15px;
     margin-bottom: 30px;
     height: auto;
@@ -352,7 +352,7 @@ main {
 #portuguese-content nav a {
     margin: 0 10px;
     text-decoration: none;
-    color: #002147;
+    color: var(--text-color-h2);
     font-weight: bold;
 }
 
@@ -365,14 +365,14 @@ main {
 }
 
 #portuguese-content h2 {
-    color: #004080;
+    color: var(--text-color-h2);
     margin-top: 30px;
     border-bottom: 2px solid #ddd;
     padding-bottom: 10px;
 }
 
 #portuguese-content h3 {
-    color: #00509e;
+    color: var(--text-color-h2);
     margin-top: 25px;
 }
 
@@ -399,11 +399,11 @@ main {
 
 #portuguese-content figcaption {
     font-size: 0.9rem;
-    color: #555;
+    color: var(--text-color-img);
     margin-top: 5px;
 }
 
 #portuguese-content footer p {
     font-size: 0.8rem;
-    color: #777;
+    color: var(--text-color-img);
 }
