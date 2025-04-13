@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <link rel="stylesheet" href="./css/contents.css">
     <link rel="stylesheet" href="./css/index.css">
@@ -12,10 +13,11 @@
     <script>
         const theme = window.localStorage.getItem("theme");
         if (theme === "dark") {
-          document.documentElement.classList.add("dark");
+            document.documentElement.classList.add("dark");
         }
-      </script>
+    </script>
 </head>
+
 <body>
     <nav>
         <div class="container">
@@ -31,28 +33,359 @@
             </div>
         </div>
     </nav>
-    <div class = "container">
+    <div class="container">
         <aside>
             <div class="subjects">
                 <div id="geography">
-                    <a href="geography.html"><p>Geografia</p></a>
+                    <a href="geography.html">
+                        <p>Geografia</p>
+                    </a>
                 </div>
                 <div id="history">
-                    
-                    <a href="history.html"><p>História</p></a>
+
+                    <a href="history.html">
+                        <p>História</p>
+                    </a>
                 </div>
                 <div id="math">
-                    
-                    <a href="math.html"><p>Matemática</p></a>
+
+                    <a href="math.html">
+                        <p>Matemática</p>
+                    </a>
                 </div>
                 <div id="portuguese">
-                    
-                    <a href="portuguese.html"><p>Português</p></a>
+
+                    <a href="portuguese.html">
+                        <p>Português</p>
+                    </a>
                 </div>
             </div>
         </aside>
         <main>
             <div class="contents">
+                <div id="history-content">
+                    <div class="container">
+                        <!-- Cabeçalho -->
+                        <header>
+                            <h1>Segunda Guerra Mundial</h1>
+                            <p>Uma análise aprofundada de um dos eventos mais transformadores do século XX.</p>
+                        </header>
+
+                        <!-- Menu de Navegação -->
+                        <nav>
+                            <a href="#introducao">Introdução</a>
+                            <a href="#contexto">Contexto Histórico</a>
+                            <a href="#causas">Causas do Conflito</a>
+                            <a href="#desenvolvimento">Desenvolvimento da Guerra</a>
+                            <a href="#consequencias">Consequências e Impactos</a>
+                            <a href="#legado">Legado Histórico</a>
+                            <a href="#conclusao">Conclusão</a>
+                        </nav>
+
+                        <!-- Artigo -->
+                        <article>
+                            <!-- Introdução -->
+                            <section id="introducao">
+                                <h2>Introdução</h2>
+                                <p>
+                                    A Segunda Guerra Mundial (1939-1945) foi um conflito de proporções inimagináveis que
+                                    envolveu a maioria das nações do mundo, dividindo-as em dois blocos antagônicos: os
+                                    Aliados e o Eixo. Mais que uma série de batalhas e campanhas, este conflito alterou
+                                    a estrutura política, econômica e social do planeta, reconfigurando fronteiras e
+                                    alterando paradigmas que moldam a geopolítica até os dias atuais.
+                                </p>
+                                <p>
+                                    No decorrer destes seis anos de conflito, milhões de vidas foram perdidas e inúmeras
+                                    cidades foram destruídas, o que forçou uma reflexão global sobre os limites do
+                                    nacionalismo e da ambição desmedida. Este artigo se propõe a oferecer uma análise
+                                    detalhada não apenas dos eventos militares, mas também dos fatores sociais,
+                                    econômicos e ideológicos que contribuíram para este marco histórico.
+                                </p>
+                                <figure>
+                                    <img src="./img/history-imgs/WWII overview.png"
+                                        alt="Imagem ilustrativa da Segunda Guerra Mundial">
+                                    <figcaption>Vista panorâmica ilustrativa representando a magnitude e a abrangência
+                                        do conflito.</figcaption>
+                                </figure>
+                            </section>
+
+                            <!-- Contexto Histórico -->
+                            <section id="contexto">
+                                <h2>Contexto Histórico</h2>
+                                <p>
+                                    O período que antecedeu a Segunda Guerra Mundial foi marcado por profundas
+                                    transformações na ordem mundial. Após a Primeira Guerra Mundial, o Tratado de
+                                    Versalhes impôs condições duras e punitivas à Alemanha, gerando um sentimento de
+                                    injustiça e humilhação. Essa penalização, combinada com a instabilidade econômica
+                                    global, fomentou o ambiente perfeito para o surgimento de ideologias extremistas e
+                                    regimes autoritários.
+                                </p>
+                                <p>
+                                    Na década de 1930, o mundo vivia uma profunda crise econômica decorrente da Grande
+                                    Depressão, que afetou não só as economias ocidentais, mas também acelerou processos
+                                    de industrialização e reformas sociais em diversos países. Nesse cenário de
+                                    incertezas, líderes carismáticos prometeram soluções radicais e transformações
+                                    sociais, ganhando o apoio de grandes parcelas da população.
+                                </p>
+                                <p>
+                                    Além disso, as tensões étnicas e os conflitos territoriais latentes na Europa e na
+                                    Ásia contribuíram para a deterioração das relações internacionais, preparando o
+                                    terreno para um confronto de escala global que viria a redesenhar completamente o
+                                    mapa político do mundo.
+                                </p>
+                                <figure>
+                                    <img src="./img/history-imgs/end WWI.png"
+                                        alt="Contexto histórico da pós-Primeira Guerra Mundial">
+                                    <figcaption>A instabilidade social e econômica do período pós-Primeira Guerra
+                                        Mundial revelou-se como uma semente para futuros conflitos globais.</figcaption>
+                                </figure>
+                            </section>
+
+                            <!-- Causas do Conflito -->
+                            <section id="causas">
+                                <h2>Causas do Conflito</h2>
+                                <p>
+                                    O surgimento da Segunda Guerra Mundial não pode ser atribuído a um único fator, mas
+                                    sim a um complexo conjunto de causas interligadas. Dentre as principais,
+                                    destacam-se:
+                                </p>
+                                <ul>
+                                    <li>
+                                        <strong>Tratado de Versalhes:</strong> As duras condições impostas à Alemanha
+                                        após a Primeira Guerra Mundial, incluindo pesadas reparações e limitações
+                                        militares, fomentaram um clima de revanchismo que permitiu a ascensão de
+                                        ideologias nacionalistas e extremistas.
+                                    </li>
+                                    <li>
+                                        <strong>Ascensão dos Regimes Totalitários:</strong> A consolidação de regimes
+                                        autoritários na Alemanha, Itália e Japão, liderados por figuras como Adolf
+                                        Hitler, Benito Mussolini e os comandantes militares japoneses, impulsionou
+                                        políticas expansionistas e revisionistas.
+                                    </li>
+                                    <li>
+                                        <strong>Crise Econômica e Social:</strong> A Grande Depressão aprofundou as
+                                        desigualdades sociais, gerando tensões e instabilidades que levaram à
+                                        radicalização das políticas e ao apoio popular a soluções extremas.
+                                    </li>
+                                    <li>
+                                        <strong>Conflitos Territoriais e Nacionalistas:</strong> Disputas históricas,
+                                        tanto na Europa quanto na Ásia, exacerbaram rivalidades entre nações,
+                                        contribuindo para a escalada dos conflitos.
+                                    </li>
+                                </ul>
+                                <p>
+                                    Esses fatores, combinados com a ineficiência dos mecanismos diplomáticos
+                                    internacionais da época, criaram um ambiente em que a guerra era, de certa forma,
+                                    inevitável. As falhas na cooperação global e a incapacidade de resolver
+                                    pacificamente as divergências entre as nações abriram caminho para um conflito que
+                                    viria a consumir o mundo.
+                                </p>
+                                <figure>
+                                    <img src="./img/history-imgs/castazAliados.png" alt="Propaganda Aliados" style="height: 458px;">
+                                    <img src="./img/history-imgs/cartaz eugenista.jpeg" alt="Propaganda e ideologia totalitária" style="height: 458px;">
+                                    <figcaption>Cartazes de propaganda evidenciam a consolidação dos regimes
+                                        totalitários e sua influência sobre as massas.</figcaption>
+                                </figure>
+                            </section>
+
+                            <!-- Desenvolvimento da Guerra -->
+                            <section id="desenvolvimento">
+                                <h2>Desenvolvimento da Guerra</h2>
+                                <p>
+                                    O estopim para o conflito foi a invasão da Polônia em 1º de setembro de 1939, quando
+                                    as tropas alemãs, empregando a tática da Blitzkrieg ou "guerra relâmpago",
+                                    conseguiram uma rápida ocupação do território polonês. A resposta imediata dos
+                                    países aliados transformou este ato em um conflito armado de proporções globais.
+                                </p>
+                                <p>
+                                    Ao longo dos seis anos seguintes, a guerra se expandiu por diversos teatros de
+                                    operações, apresentando desafios únicos em cada frente. Na Europa Ocidental, a
+                                    rápida sucessão de vitórias alemãs contrastava com a resistência do Reino Unido,
+                                    que, graças à sua poderosa força aérea, conseguiu evitar uma invasão completa. O uso
+                                    estratégico de aviões e tanques demonstrou as inovações tecnológicas que
+                                    caracterizariam os combates.
+                                </p>
+                                <h3>Expansão e Teatros de Batalha</h3>
+                                <p>
+                                    Na Frente Oriental, a Operação Barbarossa, lançada em junho de 1941, marcou o início
+                                    de uma campanha brutal contra a União Soviética. Este teatro foi caracterizado por
+                                    confrontos em condições climáticas extremas, onde a determinação dos defensores
+                                    soviéticos transformou a invasão em um impasse sangrento. Confrontos como a Batalha
+                                    de Stalingrado destacaram o custo humano e material dessa campanha.
+                                </p>
+                                <p>
+                                    No Pacífico, o embate entre os Estados Unidos e o Império do Japão foi marcado por
+                                    intensos combates navais e terrestres. Batalhas como a de Midway e Guadalcanal foram
+                                    decisivas para mudar o rumo da guerra, demonstrando a importância do controle dos
+                                    mares e das ilhas estratégicas.
+                                </p>
+                                <h3>Inovações e Táticas de Guerra</h3>
+                                <p>
+                                    A Segunda Guerra Mundial foi também um período de intenso desenvolvimento
+                                    tecnológico e militar. O aperfeiçoamento de equipamentos, a introdução dos radares e
+                                    os avanços na medicina militar transformaram a maneira de conduzir os combates.
+                                    Táticas inovadoras e o emprego de propaganda influenciaram não apenas a esfera
+                                    militar, mas também o moral e a mobilização das populações.
+                                </p>
+                                <p>
+                                    Além dos confrontos diretos, o conflito propiciou a criação de redes de espionagem e
+                                    contrainformação, que foram fundamentais para a condução das operações militares.
+                                    Esse cenário também levou a um aumento no uso de técnicas de criptografia e
+                                    decodificação, cujas inovações ultrapassaram o período de guerra.
+                                </p>
+                                <h3>A Vivência do Conflito</h3>
+                                <p>
+                                    O impacto da guerra não se restringiu aos campos de batalha. Civis de diversas
+                                    nações enfrentaram enormes dificuldades, desde a destruição de suas casas até a
+                                    escassez de alimentos e recursos básicos. Bombardeios aéreos, deslocamentos em massa
+                                    e a constante ameaça de violência foram experiências comuns para milhões de pessoas.
+                                </p>
+                                <p>
+                                    Essa vivência transformou a sociedade, impulsionando mudanças nas estruturas
+                                    familiares e na organização das cidades, onde a resiliência e a solidariedade se
+                                    tornaram indispensáveis para a sobrevivência.
+                                </p>
+                                <figure>
+                                    <img src="./img/history-imgs/Stalingrado.jpg"
+                                        alt="Batalhas e campanhas da Segunda Guerra Mundial">
+                                    <figcaption>Diversas campanhas demonstram a magnitude dos desafios enfrentados pelos
+                                        exércitos e a intensidade dos combates.</figcaption>
+                                </figure>
+                            </section>
+
+                            <!-- Consequências e Impactos -->
+                            <section id="consequencias">
+                                <h2>Consequências e Impactos</h2>
+                                <p>
+                                    O fim da Segunda Guerra Mundial, em 1945, não significou o fim das transformações
+                                    provocadas pelo conflito. Muito pelo contrário, o término da guerra inaugurou uma
+                                    nova era na política mundial, marcada pelo redesenho das fronteiras e pela
+                                    emergência de duas superpotências: os Estados Unidos e a União Soviética.
+                                </p>
+                                <p>
+                                    A criação das Nações Unidas foi uma resposta direta às falhas das instituições
+                                    anteriores e refletiu o desejo global de evitar uma repetição de horrores
+                                    semelhantes. As iniciativas de reconstrução, como o Plano Marshall, desempenharam um
+                                    papel crucial na recuperação econômica de diversas nações, transformando os cenários
+                                    devastados pela guerra em polos de desenvolvimento e modernização.
+                                </p>
+                                <p>
+                                    No âmbito social, o conflito acelerou importantes mudanças. O reconhecimento dos
+                                    direitos humanos, a conscientização sobre as atrocidades cometidas e o
+                                    fortalecimento dos movimentos por justiça social levaram a debates intensos que
+                                    moldaram futuras legislações e acordos internacionais.
+                                </p>
+                                <ul>
+                                    <li>
+                                        <strong>Redesenho Geopolítico:</strong> A divisão da Europa e a consolidação das
+                                        influências dos Estados Unidos e da União Soviética configuraram a Guerra Fria,
+                                        que influenciaria a política global nas décadas seguintes.
+                                    </li>
+                                    <li>
+                                        <strong>Criação das Nações Unidas:</strong> Um organismo internacional foi
+                                        estabelecido para garantir a paz e fomentar a cooperação entre as nações,
+                                        refletindo a necessidade de um sistema que evitasse futuros conflitos em escala
+                                        global.
+                                    </li>
+                                    <li>
+                                        <strong>Reconstrução Econômica e Social:</strong> Projetos ambiciosos, como o
+                                        Plano Marshall, permitiram a modernização das infraestruturas e a recuperação
+                                        econômica dos países devastados.
+                                    </li>
+                                    <li>
+                                        <strong>Transformações Sociais:</strong> As lições colhidas com o conflito
+                                        impulsionaram avanços em direitos civis, igualdade de gênero e justiça social,
+                                        impactando gerações futuras.
+                                    </li>
+                                </ul>
+                                <figure>
+                                    <img src="./img/history-imgs/Marshall.jpg "
+                                        alt="Reconstrução pós-guerra" style="height: 350px;">
+                                    <figcaption>O período de reconstrução após a guerra serviu de base para a ordem
+                                        mundial contemporânea.</figcaption>
+                                </figure>
+                            </section>
+
+                            <!-- Legado Histórico -->
+                            <section id="legado">
+                                <h2>Legado Histórico</h2>
+                                <p>
+                                    O legado da Segunda Guerra Mundial permanece vivo em diversos âmbitos da sociedade
+                                    moderna. As inovações tecnológicas, os avanços nas comunicações e a
+                                    institucionalização dos direitos humanos são apenas alguns dos reflexos desse
+                                    período conturbado.
+                                </p>
+                                <p>
+                                    Museus, memoriais e centros de pesquisa foram criados ao redor do mundo com o
+                                    intuito de preservar a memória das vítimas e de educar as novas gerações sobre os
+                                    perigos do extremismo e da intolerância. A reconstrução do tecido social e a busca
+                                    por reconciliação tornaram-se temas centrais para muitos países, evidenciando a
+                                    importância da memória histórica na prevenção de futuros conflitos.
+                                </p>
+                                <p>
+                                    Além disso, a influência do conflito pode ser observada na cultura popular, na
+                                    literatura e no cinema, onde inúmeras obras refletem as experiências de guerra, a
+                                    luta contra a opressão e a busca incessante por um mundo mais justo e pacífico.
+                                </p>
+                                <ul>
+                                    <li>
+                                        <strong>Avanços Tecnológicos:</strong> As pesquisas e inovações desenvolvidas
+                                        para fins militares encontraram ampla aplicação no setor civil, contribuindo
+                                        para o progresso em áreas como a aviação, a computação e a medicina.
+                                    </li>
+                                    <li>
+                                        <strong>Direitos Humanos e Justiça Internacional:</strong> As atrocidades
+                                        cometidas durante a guerra motivaram a criação de tribunais e organismos
+                                        dedicados à proteção dos direitos humanos, estabelecendo precedentes importantes
+                                        para o direito internacional.
+                                    </li>
+                                    <li>
+                                        <strong>Memória e Educação:</strong> A criação de espaços de memória e a
+                                        incorporação dos ensinamentos desse período nos currículos escolares reforçam a
+                                        importância de lembrar para não repetir os erros do passado.
+                                    </li>
+                                    <li>
+                                        <strong>Influência Cultural:</strong> A arte, a literatura e o cinema se
+                                        inspiraram intensamente nas narrativas de guerra, promovendo debates sobre a
+                                        natureza humana e a resiliência em tempos de adversidade.
+                                    </li>
+                                </ul>
+                                <figure>
+                                    <img src="./img/history-imgs/WWII Memorial.webp"
+                                        alt="Legado histórico da Segunda Guerra Mundial">
+                                    <figcaption>O legado do conflito continua a inspirar e alertar a humanidade para os
+                                        desafios da convivência e da paz.</figcaption>
+                                </figure>
+                            </section>
+
+                            <!-- Conclusão -->
+                            <section id="conclusao">
+                                <h2>Conclusão</h2>
+                                <p>
+                                    A Segunda Guerra Mundial permanece como um dos eventos mais significativos e
+                                    impactantes da história moderna. Seus desdobramentos moldaram a ordem mundial,
+                                    redefiniram as relações internacionais e ensinaram lições fundamentais sobre os
+                                    perigos do autoritarismo e do extremismo.
+                                </p>
+                                <p>
+                                    Ao mergulhar profundamente na análise deste conflito, torna-se evidente que a
+                                    compreensão dos fatores que o desencadearam e dos métodos empregados durante a
+                                    guerra é essencial para que possamos evitar a repetição dos mesmos erros. A
+                                    reconstrução, tanto material quanto moral, iniciada após o conflito, nos oferece
+                                    lições valiosas sobre resiliência, cooperação e a importância do diálogo.
+                                </p>
+                                <p>
+                                    Este artigo procurou proporcionar um panorama detalhado e abrangente da Segunda
+                                    Guerra Mundial, explorando desde as raízes de suas causas até os complexos
+                                    desdobramentos que perduram até os dias de hoje. É fundamental que a memória desses
+                                    acontecimentos seja preservada para que futuras gerações possam aprender e se
+                                    inspirar em uma história marcada, acima de tudo, pela busca incessante por paz e
+                                    justiça.
+                                </p>
+                            </section>
+                        </article>
+                    </div>
+                </div>
 
             </div>
         </main>
@@ -61,4 +394,5 @@
 <footer>
 
 </footer>
+
 </html>
