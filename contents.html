@@ -14,7 +14,7 @@
         if (theme === "dark") {
           document.documentElement.classList.add("dark");
         }
-      </script>
+    </script>
 </head>
 <body>
     <nav>
@@ -32,13 +32,26 @@
         </div>
     </nav>
     <div class = "container">
-        <main>
+        <div id = "main">
             <div class="contents">
                 <div class = "iframeSubject">
+                    <iframe src="math.html" scrolling="yes" class = "iframe" onload="filtrarIframe()"></iframe>
+                    <div class = "iframeSubjectBar"></div>
+                </div>
+                <div class = "iframeSubject">
+                    <iframe src="" scrolling="yes" class = "iframe" onload="filtrarIframe()"></iframe>
+                    <div class = "iframeSubjectBar"></div>
+                </div>
+                <div class = "iframeSubject">
+                    <iframe src="" scrolling="yes" class = "iframe" onload="filtrarIframe()"></iframe>
+                    <div class = "iframeSubjectBar"></div>
+                </div>
+                <div class = "iframeSubject">
+                    <iframe src="" scrolling="yes" class = "iframe" onload="filtrarIframe()"></iframe>
                     <div class = "iframeSubjectBar"></div>
                 </div>
             </div>
-        </main>
+        </div>
     </div>
 </body>
 <footer>

@@ -1,3 +1,5 @@
+
+// Seleciona todos os elementos que possuem animações
 // Seleciona todos os elementos que possuem animações
 const elements = document.querySelectorAll('#math .math-back > [id]');
 
