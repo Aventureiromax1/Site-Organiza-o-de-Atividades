@@ -342,7 +342,7 @@ section .activity > [id] p {
 
 section .activity > [id]:hover{
     border-radius: 8px;
-    border: 8px solid var(--bd-default);
+    border: 6px solid var(--bd-default);
     scale: 1.1;
 }
 section .activity > [id] a{
