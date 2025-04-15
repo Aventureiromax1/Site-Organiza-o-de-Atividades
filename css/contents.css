@@ -39,7 +39,7 @@ html {
         width: 50px;
         height: 50px;
         border-radius: 50%;
-        display: none;
+        opacity: 0;
     }
 
     aside {
