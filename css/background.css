@@ -1,7 +1,12 @@
 /*botaos*/
-section .activity > [id]{
+section .activity>[id] {
     background-color: var(--bg-activities);
 }
+
+.dark section .activity>[id] {
+    text-shadow: #000 0px 0px 10px;
+}
+
 section .activity button {
     display: flex;
     position: absolute;
@@ -10,24 +15,26 @@ section .activity button {
     width: 100%;
     height: 100%;
     opacity: 0;
-    z-index: 99999;
 }
+
 /*geografia*/
 section .activity #geography {
     background-image: url("../img/globe.gif");
-    background-size: 50%; 
+    background-size: 50%;
     background-repeat: no-repeat;
     background-position: right;
 }
-section .activity p{
+
+section .activity p {
     font-size: 300%;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     margin: 20px;
 }
+
 /*Geografia*/
 
 /*historia*/
-section .activity #history .castle .ground{
+section .activity #history .castle .ground {
     width: 50%;
     height: 10px;
     background-color: green;
@@ -36,9 +43,11 @@ section .activity #history .castle .ground{
     left: 0;
     z-index: 5;
     border-top: 10px 0px solid green;
-    border-radius: 50% 50% 0 0; /* Creates a wave-like effect */
+    border-radius: 50% 50% 0 0;
+    /* Creates a wave-like effect */
 }
-section .activity #history .hist-back{
+
+section .activity #history .hist-back {
     width: 110%;
     height: 5px;
     display: flex;
@@ -49,9 +58,10 @@ section .activity #history .hist-back{
     margin: 10px auto;
     justify-content: center;
     align-items: center;
-     border-radius: 8px;
-     z-index: 2;
+    border-radius: 8px;
+    z-index: 2;
 }
+
 section .activity #history .Sun-moon {
     left: 10px;
     top: -110px;
@@ -60,8 +70,6 @@ section .activity #history .Sun-moon {
     border-radius: 50%;
     background-color: var(--sun-color);
     position: absolute;
-}
-section .activity #history .Sun-moon{
     box-shadow: yellow 0px 0px 30px;
 }
 
@@ -74,11 +82,13 @@ section .activity #history .Sun-moon{
     text-shadow: white;
     box-shadow: white 0px 0px 20px;
 }
-section .activity #history .castle > [id]{
+
+section .activity #history .castle>[id] {
     background-color: gray;
 
 }
-section .activity #history .castle #castle-left{
+
+section .activity #history .castle #castle-left {
     width: 50px;
     height: 75px;
     position: absolute;
@@ -88,7 +98,8 @@ section .activity #history .castle #castle-left{
     border-right: 4px solid rgb(165, 165, 165);
     z-index: 1;
 }
-section .activity #history .castle #castle-center{
+
+section .activity #history .castle #castle-center {
     width: 50px;
     height: 50px;
     position: absolute;
@@ -97,7 +108,8 @@ section .activity #history .castle #castle-center{
     justify-content: center;
     align-items: flex-end;
 }
-section .activity #history .castle #castle-center #backdoor{
+
+section .activity #history .castle #castle-center #backdoor {
     width: 15px;
     height: 30px;
     background-color: #3f3f3f;
@@ -108,7 +120,8 @@ section .activity #history .castle #castle-center #backdoor{
     left: 25%;
     justify-content: space-around;
 }
-section .activity #history .castle #castle-center #door{
+
+section .activity #history .castle #castle-center #door {
     width: 15px;
     height: 30px;
     background-color: #964500;
@@ -121,7 +134,8 @@ section .activity #history .castle #castle-center #door{
     animation: downdoor 40s infinite linear;
     animation-delay: 10s;
 }
-section .activity #history .castle #castle-center #door #line{
+
+section .activity #history .castle #castle-center #door #line {
     width: 2px;
     height: 44px;
     background-color: #703400;
@@ -130,7 +144,8 @@ section .activity #history .castle #castle-center #door #line{
     left: 50%;
 
 }
-section .activity #history .castle #castle-center #door #line2{
+
+section .activity #history .castle #castle-center #door #line2 {
     width: 2px;
     height: 43px;
     background-color: #703400;
@@ -139,7 +154,8 @@ section .activity #history .castle #castle-center #door #line2{
     left: 5%;
 
 }
-section .activity #history .castle #castle-center #door #line3{
+
+section .activity #history .castle #castle-center #door #line3 {
     width: 2px;
     height: 41px;
     background-color: #703400;
@@ -150,23 +166,17 @@ section .activity #history .castle #castle-center #door #line3{
 }
 
 @keyframes downdoor {
-    0%{
+
+    0%,
+    60%,
+    80%,
+    100% {
         transform: translateY(0);
     }
-    20%{
+
+    20%,
+    40% {
         transform: translateY(50px);
-    }
-    40%{
-        transform: translateY(50px);
-    }
-    60%{
-        transform: translateY(0);
-    }
-    80%{ 
-        transform: translateY(0px);
-    }
-    100%{
-        transform: translateY(0);
     }
 }
 
@@ -180,7 +190,8 @@ section .activity #history .castle #castle-right {
     border-right: 4px solid rgb(165, 165, 165);
     z-index: 1;
 }
-section .activity #history .castle #castle-top1{
+
+section .activity #history .castle #castle-top1 {
     background-color: gray;
     width: 10px;
     height: 8px;
@@ -191,7 +202,8 @@ section .activity #history .castle #castle-top1{
     position: absolute;
 
 }
-section .activity #history .castle #castle-top2{
+
+section .activity #history .castle #castle-top2 {
     background-color: gray;
     width: 10px;
     height: 8px;
@@ -202,7 +214,8 @@ section .activity #history .castle #castle-top2{
     position: absolute;
     z-index: 1;
 }
-section .activity #history .castle #castle-top3{
+
+section .activity #history .castle #castle-top3 {
     background-color: gray;
     width: 10px;
     height: 8px;
@@ -212,24 +225,25 @@ section .activity #history .castle #castle-top3{
     left: 70%;
     position: absolute;
 }
+
 /*historia*/
 
 
 /*Matematica*/
 
-section .activity #math .math-back > [id] {
+section .activity #math .math-back>[id] {
     animation: fallingBlocks var(--animationTime) linear infinite;
     --animation-delay: 0s;
     animation-delay: var(--animationDelay, 0s);
     --randomPos: 0px;
 }
 
-section .activity #math .math-back > [id]{
+section .activity #math .math-back>[id] {
     width: 50px;
     height: 50px;
     display: flex;
     position: absolute;
-    background-color: rgb(255, 100, 0);
+    background-color: #ff6400;
     filter: invert();
     margin: 10px auto;
     justify-content: center;
@@ -237,7 +251,8 @@ section .activity #math .math-back > [id]{
     border-radius: 8px;
     z-index: 2;
 }
-section .activity #math .math-back [id^="plus"]{
+
+section .activity #math .math-back [id^="plus"] {
     rotate: 30deg;
     left: 0px;
     bottom: -15px;
@@ -248,7 +263,8 @@ section .activity #math .math-back [id^="plus"]{
     background-position-y: 10%;
     filter: invert();
 }
-section .activity #math .math-back [id^="minus"]{
+
+section .activity #math .math-back [id^="minus"] {
     rotate: 10deg;
     left: 170px;
     top: -20px;
@@ -258,7 +274,8 @@ section .activity #math .math-back [id^="minus"]{
     background-size: cover;
     filter: invert();
 }
-section .activity #math .math-back [id^="multiply"]{
+
+section .activity #math .math-back [id^="multiply"] {
     rotate: -10deg;
     left: 250px;
     bottom: 0;
@@ -269,19 +286,20 @@ section .activity #math .math-back [id^="multiply"]{
     background-position-y: 37%;
     filter: invert();
 }
-section .activity #math .math-back [id^="division"]{
+
+section .activity #math .math-back [id^="division"] {
     rotate: 10deg;
     left: 60px;
     top: 0;
     background-image: url(../img/mathsymbols/division.svg);
     background-size: 100%;
     background-repeat: no-repeat;
-    background-position-y:29%;
+    background-position-y: 29%;
     background-position-x: 1000%;
     filter: invert();
 }
 
-section .activity #math .math-back [id] [id^="#element"]{
+section .activity #math .math-back [id] [id^="#element"] {
     width: 30px;
     height: 7px;
     border-radius: 20%;
@@ -292,6 +310,7 @@ section .activity #math .math-back [id] [id^="#element"]{
     0% {
         transform: translateX(var(--randomPos)) translateY(-300px) rotate(0deg);
     }
+
     100% {
         transform: translateX(var(--randomPos)) translateY(150px) rotate(360deg);
     }
@@ -301,7 +320,7 @@ section .activity #math .math-back [id] [id^="#element"]{
 
 /*Portugues*/
 
-section .activity #portuguese .book:first-child{
+section .activity #portuguese .book:first-child {
     width: 100px;
     height: 300px;
     border: 5px solid #cf6100;
@@ -314,7 +333,7 @@ section .activity #portuguese .book:first-child{
     animation-delay: 2s;
 }
 
-section .activity #portuguese .book:nth-child(2){
+section .activity #portuguese .book:nth-child(2) {
     width: 100px;
     height: 300px;
     border: 5px solid #cf6100;
@@ -324,53 +343,62 @@ section .activity #portuguese .book:nth-child(2){
     right: -112px;
     top: -5px;
 }
-section .activity #portuguese .book [id^="paper"]{
+
+section .activity #portuguese .book [id^="paper"] {
     top: 5px;
     width: 90%;
     height: 90%;
     position: absolute;
     border-left: 8px solid papayawhip;
     border-radius: 8px 3px;
-    background: linear-gradient(to right, papayawhip,papayawhip,papayawhip,papayawhip,papayawhip,papayawhip,papayawhip, rgb(247, 191, 143) );
+    background: linear-gradient(to right, papayawhip, papayawhip, papayawhip, papayawhip, papayawhip, papayawhip, papayawhip, rgb(247, 191, 143));
     overflow: hidden;
     padding: 5px;
     left: -4px;
 }
 
-section .activity #portuguese .book #paper1{
+section .activity #portuguese .book #paper1 {
     rotate: 180deg;
     right: -2px;
     border-radius: 3px 8px;
     z-index: 1;
 }
-section .activity #portuguese .book #paper{
+
+section .activity #portuguese .book #paper {
     right: -1px;
     z-index: 2;
 }
-section .activity #portuguese .book #text{
+
+section .activity #portuguese .book #text {
     font-size: 6px;
     text-align: justify;
 }
-section .activity #portuguese .book:nth-child(1) #text{
+
+section .activity #portuguese .book:nth-child(1) #text {
     margin-right: 5px;
 }
-section .activity #portuguese .book:nth-child(2) #text{
+
+section .activity #portuguese .book:nth-child(2) #text {
     position: absolute;
     bottom: 5px;
     rotate: 180deg;
     margin-right: 16px;
 }
+
 @keyframes movingBook {
-    0%{
+    0% {
         right: -400px;
     }
-    3%{
+
+    3% {
         right: 0px;
     }
-    80%{
+
+    80% {
         right: 0px;
     }
-    100%{
+
+    100% {
         right: 400px;
     }
 }

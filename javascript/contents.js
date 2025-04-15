@@ -1,23 +1,23 @@
 function toggleAside() {
-    const aside = document.querySelector('aside');
-    if (aside.style.display === 'none' || !aside.style.display) {
-        aside.style.display = 'block';
-        aside.style.maxWidth = '10rem';
-        aside.style.backgroundColor = 'var(--bg-aside)';
-    } else {
-        aside.style.display = 'none';
-    }
+  const aside = document.querySelector('aside');
+  if (aside.style.display === 'none' || !aside.style.display) {
+    aside.style.display = 'block';
+    aside.style.maxWidth = '10rem';
+    aside.style.backgroundColor = 'var(--bg-aside)';
+  } else {
+    aside.style.display = 'none';
+  }
 }
 
 function filtrarIframe() {
   const iframe = document.querySelectorAll(".iframe");
   iframe.forEach((ifram) => {
-  const doc = ifram.contentDocument || ifram.contentWindow.document;
-  const mainContent = doc.querySelector("#introducao");
-  
+    const doc = ifram.contentDocument || ifram.contentWindow.document;
+    const mainContent = doc.querySelector("#introducao");
 
-  if(mainContent){
-    const novoHtml = `
+
+    if (mainContent) {
+      const novoHtml = `
       <!DOCTYPE html>
       <html>
         <head>
@@ -33,15 +33,15 @@ function filtrarIframe() {
       </html>
     `;
 
-    doc.open();
-    doc.write(novoHtml);
-    doc.close();
-  }
+      doc.open();
+      doc.write(novoHtml);
+      doc.close();
+    }
   })
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-  
+
   const iframeSubjects = document.querySelectorAll(".iframeSubject");
   const iframe = document.querySelectorAll(".iframe");
   // animação do container de cada iframe em "contents.html"
@@ -54,13 +54,13 @@ document.addEventListener("DOMContentLoaded", () => {
   function verificarTamanho() {
     iframeSubjects.forEach((container) => {
       const iframe = container.querySelector('iframe')
-      const containerHeight = container.offsetHeight; 
-      
-      
+      const containerHeight = container.offsetHeight;
+
+
       if (containerHeight < 51) {
-        iframe.style.display = 'none'; 
+        iframe.style.display = 'none';
       } else {
-        iframe.style.display = 'block'; 
+        iframe.style.display = 'block';
       }
     });
   }
@@ -79,4 +79,3 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
-  

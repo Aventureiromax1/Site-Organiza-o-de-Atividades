@@ -1,68 +1,74 @@
 @import url(https://db.onlinewebfonts.com/c/d9d77150b3dda1eea88a7a8f979e7711?family=DM+Sans+Regular);
+
 /*HEADER*/
-body{
+body {
     background-color: var(--bg-color);
     user-select: none;
     width: 100%;
     height: 100dvh;
     font-family: "DM Sans Regular";
+}
 
-/*cores light theme*/
+:root {
+    /*cores light theme*/
 
     /*layout padrao*/
-        --bg-color: #d6d5d5;
-        --bg-navbar-1: #494949;
-        --bg-navbar-2: #000000;
-        --bd-nav: #30353a;
-        --text-color: #000000;
+    --bg-color: #d6d5d5;
+    --bg-navbar-1: #494949;
+    --bg-navbar-2: #000000;
+    --bd-nav: #30353a;
+    --text-color: #000000;
+    --bd-shadow-activities: #3d3d3d;
     /*botoes*/
-        --bg-home: #deb887;
-        --bg-homeText: black;
-        --bd-home-hover: #6b6b6bc4;
-        --bd-default: #3d3d3d;
-        --bg-SubjectsBtn: #000000;
-        --bg-SubjectsBtnText: #deb887;
-        --bg-subjectsBtn-hover: #6b6b6bc4;
+    --bg-home: #deb887;
+    --bg-homeText: black;
+    --bd-home-hover: #6b6b6bc4;
+    --bd-default: #3d3d3d;
+    --bg-SubjectsBtn: #000000;
+    --bg-SubjectsBtnText: #deb887;
+    --bg-subjectsBtn-hover: #6b6b6bc4;
     /*aside*/
-        --bg-aside: #c4c4c4;
-        --bd-aside: #717d8b;
-        --bd-aside-hover: #535f6de6;
-        --bg-aside-hover-red: #e05e5ecc;
-        --bg-aside-hover-green: #83e05ecc;
+    --bg-aside: #c4c4c4;
+    --bd-aside: #717d8b;
+    --bd-aside-hover: #535f6de6;
+    --bg-aside-hover-red: #e05e5ecc;
+    --bg-aside-hover-green: #83e05ecc;
     /*activity*/
-        --bg-activities: #deb887;
+    --bg-activities: #deb887;
     /*profile*/
-        --bg-usercard: #ffffff9a;
-        --bd-usercard: #979797;
-        /*textos*/
-            --input-lbl: #646464;
-            --input-bg: #d8d8d8;
-            --input-bd-hover: #9696c8;
-            --text-color-img: #777;
-            --text-color-h1: #002147;
-            --text-color-h2: #004080;
+    --bg-profile-btn: #deb887;
+    --bg-usercard: #ffffff9a;
+    --bd-usercard: #979797;
+    /*textos*/
+    --input-lbl: #646464;
+    --input-bg: #d8d8d8;
+    --input-bd-hover: #9696c8;
+    --text-color-img: #777;
+    --text-color-h1: #002147;
+    --text-color-h2: #004080;
     /*conteudos*/
-        --bg-contents-aside-subjects: #727272;
-        --bg-contents-main: #dadada;
-        --subject-shadow: 0 4px 8px rgba(0, 0, 0, 1.0);
+    --bg-contents-aside-subjects: #727272;
+    --bg-contents-main: #dadada;
+    --subject-shadow: 0 4px 8px rgba(0, 0, 0, 1.0);
     /*materias bg*/
-        --sun-color: #ffe02f;
+    --sun-color: #ffe02f;
 }
-.dark{
+
+.dark {
     /* layout padrão */
     --bg-color: #1e1e1e;
     --bg-navbar-1: #2c2c2c;
     --bg-navbar-2: #121212;
     --bd-nav: #333840;
     --text-color: #e1e1e1;
-
+    --bd-shadow-activities: #918f8f;
     /* botões */
     --bg-home: #0f0720;
     --bg-home-hover: #a97444cc;
     --bg-homeText: white;
     --bd-default: #6c6c6c;
     --bd-default: #1a0a3d;
-    --bg-SubjectsBtn: white;
+    --bg-SubjectsBtn: #dadada;
     --bg-SubjectsBtnText: #0f0720;
     --bg-subjectsBtn-hover: #6c6c6c;
 
@@ -77,6 +83,7 @@ body{
     --bg-activities: #110d18;
 
     /* profile */
+    --bg-profile-btn: #dadada;
     --bg-usercard: #2e2e2e99;
     --bd-usercard: #5a5a5a;
 
@@ -91,14 +98,14 @@ body{
     /* conteúdos */
     --bg-contents-aside-subjects: #3b3b3b;
     --bg-contents-main: #2f2f2f;
-    --subject-shadow: 0 4px 8px rgba(255, 255, 255, 1.0);
+    --subject-shadow: 0 4px 8px #ffffff;
     /*materias bg*/
-     --sun-color: #c5c5c5;
+    --sun-color: #c5c5c5;
 }
-nav{
+
+nav {
     top: 10px;
     position: sticky;
-    display: flex;
     flex-direction: row;
     display: block;
     width: 99%;
@@ -108,20 +115,23 @@ nav{
     margin: 0px;
 }
 
-.container{
+.container {
     display: flex;
     justify-content: flex-start;
     align-items: center;
     box-sizing: border-box;
-    gap: 5px;
+    flex-wrap: nowrap;
+    gap: 20px;
     padding: 6px;
     margin: auto;
 }
 
-body .container{
+
+body .container {
     align-items: flex-start;
 }
-.home{
+
+.home {
     display: flex;
     width: 100px;
     height: 50px;
@@ -131,43 +141,49 @@ body .container{
     border-radius: 8px;
     align-items: center;
     justify-content: center;
-    animation-name: startAnimation1;
-    animation-duration: 0.5s;
+    animation: Startanimation1 0.5s;
     overflow: hidden;
-}
-.home button{
-    position: absolute;
-    height: 50px;
-    width: 100px;
-    opacity: 100;
-    z-index: 9999;
-}
-.button{
-    position: absolute;
-    height: 50px;
-    width: 100px;
-    opacity: 100;
-    z-index: 9999;
     cursor: pointer;
 }
-.Pbutton{
+
+.home button {
+    position: absolute;
+    height: 50px;
+    width: 100px;
+    opacity: 1;
+    z-index: 1;
+}
+
+.button {
+    position: absolute;
+    height: 50px;
+    width: 100px;
+    opacity: 1;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.Pbutton {
     position: absolute;
     height: 50px;
     width: 50px;
     border-radius: 50%;
-    opacity: 100;
-    z-index: 9999;
+    opacity: 1;
     cursor: pointer;
+    z-index: 1;
 }
-.home:hover{
+
+.home:hover {
     background-color: var(--bd-home-hover);
 }
-.container h1{
+
+.container h1 {
     text-align: center;
     margin: 0;
     font-size: 25px;
 }
-.SubjectsContents{
+
+.SubjectsContents {
     display: flex;
     width: 152px;
     height: 50px;
@@ -177,117 +193,118 @@ body .container{
     border-radius: 5px;
     align-items: center;
     justify-content: center;
-    animation-name: startAnimation1;
+    animation-name: StartAnimation1;
     animation-duration: 0.5s;
     overflow: hidden;
 }
 
-.SubjectsContents:hover{
+.SubjectsContents:hover {
     background-color: var(--bg-subjectsBtn-hover);
-
 }
 
-.SubjectsContents h1{
+.SubjectsContents h2 {
     text-align: center;
     margin: 0;
     flex-wrap: nowrap;
 }
 
-.profile{
+.profile {
     position: absolute;
     right: 20px;
     width: 50px;
     height: 50px;
-    background-color: var(--bg-home);
+    background-color: var(--bg-profile-btn);
     border: 3px solid var(--bd-default);
     border-radius: 50%;
     background-image: url(../img/userico.png);
     background-size: 80%;
     background-position: center;
     background-repeat: no-repeat;
-    animation-name: startAnimation1;
+    animation-name: StartAnimation1;
     animation-duration: 0.5s;
 }
 
-.profile button{
+.profile button {
     width: 50px;
     height: 50px;
     border-radius: 50%;
     opacity: 0.1;
-    z-index: 9999;
 }
 
-.profile:hover{
-    background-color: var(--bd-home-hover);
-    
+.profile:hover {
+    background-color: var(--bg-profile-btn);
+
 }
 
-.profile img:hover{
-    filter: invert(100%);
-}
 /*HEADER*/
 
 /*BODY*/
 
 
 /*Section*/
-section .activity{
+
+
+section .activity {
     display: flex;
-    width: 100%;
-    height: 30px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100dvw;
     flex-wrap: wrap;
-    justify-content: flex-start;
 }
 
-section .activity > [id] {
-    margin: 10px;
+section h2 {
+    color: var(--text-color);
+    font-size: xx-large;
+    text-align: center;
+}
+
+section .activity>[id] {
+    margin-top: 25px;
+    margin-bottom: 25px;
     width: 300px;
     max-width: 600px;
     max-height: 200px;
-    height: 100px; 
+    height: 100px;
     background-color: var(--bg-home);
-    box-shadow: 8px var(--bd-default);
-    border: 1px solid var(--bd-default);
+    border: 2px solid var(--bd-default);
     border-radius: 4px;
+    box-shadow: var(--bd-shadow-activities) 0px 0px 10px;
     justify-content: flex-start;
     align-items: center;
     position: relative;
     overflow: hidden;
     transition: 0.2s ease-in-out;
-}
-section .activity > [id] {
-    background-color: #002147;
+    scale: 1.3;
 }
 
-section .activity > [id] p {
-    z-index: 9999;
+
+
+section .activity>[id] p {
+    z-index: 5;
     position: absolute;
 }
+
 .dark section .activity [id] p {
     color: var(--text-color);
 }
 
-section .activity > [id]:hover{
+section .activity>[id]:hover {
     border-radius: 8px;
     border: 8px solid var(--bd-default);
-    scale: 1.1;
-}
-section .activity > [id] a{
-    width: 100%;
-    height: 100%;
-    z-index: 9999;
-    background-color: turquoise;
+    scale: 1.35;
 }
 
-@keyframes startAnimation1 {
-    from{
+section .activity>[id] a {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 6;
+}
+
+@keyframes StartAnimation1 {
+    from {
         opacity: 0;
         width: 0px;
     }
-    to{
-
-    }
 }
-
-
-
