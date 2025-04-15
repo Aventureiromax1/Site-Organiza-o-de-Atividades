@@ -5,9 +5,15 @@
     <script>
         const theme = window.localStorage.getItem("theme");
         if (theme === "dark") {
-          document.documentElement.classList.add("dark");
+            document.documentElement.classList.add("dark");
         }
-      </script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const userData = JSON.parse(localStorage.getItem("userData")) || {};
+            if (userData.name) document.getElementById("nameInput").value = userData.name;
+            if (userData.email) document.getElementById("emailInput").value = userData.email;
+            if (userData.password) document.getElementById("passwordInput").value = userData.password;
+        });
+    </script>
     <link rel="stylesheet" href="./css/profile.css">
     <link rel="stylesheet" href="./css/index.css">
     <link rel="stylesheet" href="./css/background.css">
@@ -35,24 +41,24 @@
             <img src="" alt="">
             <div class="userData">
                 <div class="inputGroup">
-                    <input required="" type="text" required-placeholder="">
+                    <input required="" type="text" required-placeholder="" id="nameInput" value="">
                     <label for="name">Name</label>
                 </div>
                 <div class="inputGroup">
-                    <input required="" type="email" required-placeholder="">
+                    <input required="" type="email" required-placeholder="" id="emailInput" value="">
                     <label for="email">E-mail</label>
                 </div>
                 <div class="inputGroup">
-                    <input required="" type="password" required-placeholder="">
+                    <input required="" type="password" required-placeholder="" id="passwordInput" value="">
                     <label for="password">Password</label>
                 </div>
                 <div class="Pbottom">
                     <div class="inputGroup">
-                        <a><button type="submit">Save</button></a>
+                        <a><button type="button" onclick="saveUserData()" id="saveButton">Save</button></a>
                     </div>
                     <div class="darkThemeBtn">
                         <label class="switch">
-                            <input id="input" type="checkbox" checked="darkTheme" onchange="themeToggle()"/>
+                            <input id="input" type="checkbox" checked="darkTheme" onchange="themeToggle()" />
                             <div class="slider round">
                                 <div class="sun-moon">
                                     <svg id="moon-dot-1" class="moon-dot" viewBox="0 0 100 100">
