@@ -103,7 +103,6 @@ main .usercard:hover {
   border-radius: 20px;
   width: 100px;
   color: var(--input-lbl);
-
 }
 
 .inputGroup a button:hover {
