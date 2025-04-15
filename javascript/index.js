@@ -35,7 +35,8 @@ function saveUserData(name, email, password) {
     typeof name === "string" && name.trim() !== "" &&
     typeof email === "string" && email.trim() !== "" &&
     typeof password === "string" && password.trim() !== ""
-  ) {
+  ) 
+  {
     if (typeof window.localStorage !== "undefined") {
       try {
         const userData = { name, email, password };
