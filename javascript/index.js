@@ -35,11 +35,18 @@ function saveUserData(name, email, password) {
     typeof name === "string" && name.trim() !== "" &&
     typeof email === "string" && email.trim() !== "" &&
     typeof password === "string" && password.trim() !== ""
-  ) {
+  ) 
+  {
     if (typeof window.localStorage !== "undefined") {
       try {
         const userData = { name, email, password };
         window.localStorage.setItem("userData", JSON.stringify(userData));
+        document.getElementById("saveButton").innerText = "Saved!";
+        setTimeout(() => {
+          document.getElementById("saveButton").innerText = "Save";
+          document.getElementById("saveButton").style.backgroundColor = "var(--bg-button)";
+          document.getElementById("saveButton").style.color = "var(--text-button)";
+        }, 2000);
       } catch (error) {
         console.error("Failed to save user data:", error);
         if (error.message.includes("name")) {

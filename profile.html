@@ -13,14 +13,33 @@
             if (userData.email) document.getElementById("emailInput").value = userData.email;
             if (userData.password) document.getElementById("passwordInput").value = userData.password;
         });
+        document.addEventListener("input", () => {
+            const name = document.getElementById("nameInput").value;
+            const email = document.getElementById("emailInput").value;
+            const password = document.getElementById("passwordInput").value;
+
+            if (typeof name === "string" && name.trim() !== "" &&
+                typeof email === "string" && email.trim() !== "" &&
+                typeof password === "string" && password.trim() !== "" &&
+                document.getElementById("emailInput").checkValidity()) {
+                document.getElementById("saveButton").disabled = false;
+                document.getElementById("saveButton").style.backgroundColor = "#a7ff91";
+                document.getElementById("saveButton").style.color = "#000000";
+                console.log("O email é válido.");
+            } else {
+                document.getElementById("saveButton").disabled = true;
+                console.log("O email não é válido.");
+            }
+        });
     </script>
     <link rel="stylesheet" href="./css/profile.css">
     <link rel="stylesheet" href="./css/index.css">
-    <link rel="stylesheet" href="./css/background.css">
     <script src="./javascript/index.js" defer></script>
     <script src="./javascript/animation.js" defer></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Organização de Atividades - Perfil do usuário">
+    <meta name="keywords" content="perfil, usuário, organização, atividades">
     <title>Organização de Atividades</title>
 </head>
 
@@ -41,20 +60,20 @@
             <img src="" alt="">
             <div class="userData">
                 <div class="inputGroup">
-                    <input required="" type="text" required-placeholder="" id="nameInput" value="">
+                    <input required="" type="text" required-placeholder="" id="nameInput">
                     <label for="name">Name</label>
                 </div>
                 <div class="inputGroup">
-                    <input required="" type="email" required-placeholder="" id="emailInput" value="">
+                    <input required="" type="email" required-placeholder="" id="emailInput">
                     <label for="email">E-mail</label>
                 </div>
                 <div class="inputGroup">
-                    <input required="" type="password" required-placeholder="" id="passwordInput" value="">
+                    <input required="" type="password" required-placeholder="" id="passwordInput">
                     <label for="password">Password</label>
                 </div>
                 <div class="Pbottom">
                     <div class="inputGroup">
-                        <a><button type="button" onclick="saveUserData()" id="saveButton">Save</button></a>
+                        <a><button type="submit" id="saveButton">Save</button></a>
                     </div>
                     <div class="darkThemeBtn">
                         <label class="switch">
@@ -129,8 +148,5 @@
         </div>
     </main>
 </body>
-<footer>
-
-</footer>
 
 </html>

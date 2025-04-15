@@ -4,11 +4,12 @@
 <head>
     <link rel="stylesheet" href="./css/contents.css">
     <link rel="stylesheet" href="./css/index.css">
-    <link rel="stylesheet" href="./css/background.css">
     <script src="./javascript/index.js"></script>
     <script src="./javascript/contents.js" defer></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Organização de Atividades - Conteúdos de Matemática.">
+    <meta name="keywords" content="Aritimética modular, Matemática, Conteúdos, Escola">
     <title>Organização de Atividades</title>
     <script>
         const theme = window.localStorage.getItem("theme");
@@ -26,7 +27,7 @@
             </div>
             <div class="home">
                 <a href="index.html" class="button"></a>
-                <h1>home</h1>
+                <h2>home</h2>
             </div>
             <div class="profile">
                 <a href="profile.html" class="Pbutton"></a>
@@ -63,196 +64,231 @@
         </aside>
         <main>
             <div class="contents">
-                <h1>ARITMÉTICA MODULAR</h1>
-                <br>
-                <br>
-                <article><!-- O conteúdo em si começa aqui -->
-                    <p>
-                        Existe um ramo da matemática chamado de <b>aritmética modular</b>. Trata-se do estudo de números
-                        <!--Explicação-->
-                        inteiros que retrocedem ao atingir o que chamamos de módulo. O exemplo clássico é o relógio,
-                        baseado em 12 números inteiros (12 horas)
-                        que se repetem quando o ponteiro chega ao 12. A importância de tal estudo começa a ser
-                        visualizada a partir do momento em que nós o aplicamos
-                        a outros conceitos pré-estabelecidos, como por exemplo a divisão euclidiana, que é dada por
-                        &nbsp; d = D &times; q + r (dividendo = divisor &times;
-                        quociente + resto). veja a relação a seguir: 9 &divide; 1 = 9 &rArr; 9 = 9 &times; 1 + 0.
-                        perceba que se aumentarmos algumas unidade ao 1 o
-                        resto r também se altera: 9 = 8 &times; 1 + 1 (no caso de 9 &divide; 8) e 9 = 5 &times; 1 + 4
-                        (no caso de 9 &divide; 5). Agora se continuarmos
-                        o ciclo se repete: 9 &divide; 10 &rArr; 9 = 10 &times; 0 + 1 (veja que o resto 1 apareceu
-                        novamente) A partir disso, podemos estabelecer várias
-                        relações nas divisões inteiras com base na seguinte notação:
-                    </p>
-                    <center><b>r = d mod D </b></center>
-                    <br>
-                    <p>
-                        Lê-se: r é resto da divisão inteira de d por D. desse modo para r = 5 mod 4, temos que r = 1,
-                        pois 5 = 4 &times; 1 + 1.
-                        É justamente isso que a aritmética modular estuda: As divisões com resto.
-                    </p>
-                    <br>
-                    <h2>PEQUENO TEOREMA DE FERMAT</h2>
-                    <p>
-                        Fermat, matemático Francês desenvolveu uma relação da aritmética modular com números
-                        primos de forma semelhante a uma equação. Seja n, p &isin; &#8484; Temos:
-                    </p><br>
-                    <center><strong>n &Congruent; n<sup>p </sup>(mod p)</strong></center><br>
-                    <p>
-                        Lê-se: n é congruente a n elevado a p módulo p. A importância dessa relação se deve ao fato de
-                        deixar de forma explícita a relação abordada
-                        anteriormente (repetição de números como em um relógio), pois indica que n - n<sup>p</sup> é
-                        divisível por p, como pode-se ver a seguir:
-                    </p>
-                    <ul>
-                        <li>2 + 1 ≡ 2<sup>5</sup> + 1 (mod 5) &rArr; 3 ≡ 33 &rArr; 3 ≡ 33 (mod 5) &rArr; ambos ≡ 3 (mod
-                            5) </li>
-                        <li>3 + 2 ≡ 3<sup>7</sup> + 2 (mod 7) &rArr; 5 ≡ 2189 &rArr; 5 ≡ 2189 (mod 7) &rArr; ambos ≡ 5
-                            (mod 7)</li>
-                        <li>4 + 1 ≡ 4<sup>3</sup> + 1 (mod 3) &rArr; 5 ≡ 65 &rArr; 5 ≡ 65 (mod 3) &rArr; ambos ≡ 2 (mod
-                            3)</li>
-                        <li>5 + 2 ≡ 5<sup>7</sup> + 2 (mod 7) &rArr; 7 ≡ 78127 &rArr; 7 ≡ 78127 (mod 7) &rArr; ambos ≡ 0
-                            (mod 7)</li>
-                        <li>6 + 1 ≡ 6<sup>5</sup> + 1 (mod 5) &rArr; 7 ≡ 7777 &rArr; 7 ≡ 7777 (mod 5) &rArr; ambos ≡ 2
-                            (mod 5)</li>
-                    </ul>
-                    <br>
-                    <h3><b>Outra relação</b></h3>
-                    <p>
-                        podemos simplificar o teorema da seguinte maneira: n &Congruent; n<sup>p </sup>(mod p) &rArr; 1
-                        &Congruent; n<sup>p-1 </sup>(mod p).
-                        No entanto, isso não é válido quando a é múltiplo de p, por exemplo: 6 &Congruent; 6<sup>3
-                        </sup>(mod 3) &rArr; 1 &Congruent;
-                        6<sup>2 </sup>(mod 3). Ou seja 3 é divisor de 35 (falso)
-                    </p><br>
-                    <!-- Demonstração -->
-                    <h3><b> Demonstração</b></h3>
-                    <p>Utilizaremos um método chamado de PIF (princípio da indução finita) muito famoso quando se trata
-                        da resolução de conjecturas</p>
-                    <h4>Passo base do princípio da indução finita (PIF)</h4>
-                    <p>
-                        n &Congruent; n<sup>p </sup>(mod p) vale para k, ou seja k &Congruent; k<sup>p </sup>(mod p) e
-                        que p | k - k<sup>p </sup> (p é divisor)</p>
-                    <h4>Passo indutivo</h4>
-                    <p>
-                        Temos que provar para k + 1 (de acordo com o método do PIF) logo presumimos que: p | k + 1 - (k
-                        + 1)<sup>p </sup>. Pois se vale para um K genérico e para um
-                        K + 1 genérico, logo, vale para todos desse modo, utilizando numero binomial de newton temos:
-                        <br><br>
-                        p | k + 1 -
+                <div id="math-content">
+                    <!-- O conteúdo em si começa aqui -->
+                    <header>
+                        <h1>ARITMÉTICA MODULAR</h1>
+                        <p>O estudo das divisões</p>
+                    </header>
 
-                        &#8721;
-                        <math xmlns="http://www.w3.org/1998/Math/MathML"> <!-- construção do numero binomial -->
-                            <mrow>
-                                <mo>(</mo>
-                                <mfrac linethickness="0">
+                    <nav>
+                        <a href="#introducao">Introdução</a>
+                        <a href="#desenvolvimento">Conceitos e Teoremas</a>
+                        <a href="#demonstracao">Demonstrações</a>
+                    </nav>
+
+                    <article>
+                        <section id="introducao">
+                            <h2>Introdução</h2>
+                            <br>
+                            <p> <!--Explicação-->
+                                Existe um ramo da matemática chamado de <strong>aritmética modular</strong>. Trata-se
+                                do estudo de números inteiros que retrocedem ao atingir o que chamamos de módulo.
+                                O exemplo clássico é o relógio, baseado em 12 números inteiros (12 horas)que se
+                                repetem quando o ponteiro chega ao 12. A importância de tal estudo começa a ser
+                                visualizada a partir do momento em que nós o aplicamos a outros conceitos pré-
+                                estabelecidos, como por exemplo a divisão euclidiana, que é dadapor &nbsp; d = D
+                                &times; q + r (dividendo = divisor &times; quociente + resto). veja a relação a seguir:
+                                9 &divide; 1 = 9 &rArr; 9 = 9 &times; 1 + 0. perceba que se aumentarmos algumas unidade
+                                ao 1 o resto r também se altera: 9 = 8 &times; 1 + 1 (no caso de 9 &divide; 8) e 9 = 5
+                                &times;
+                                1 + 4 (no caso de 9 &divide; 5). Agora se continuarmos o ciclo se repete: 9 &divide; 10
+                                &rArr;
+                                9 = 10 &times; 0 + 1 (veja que o resto 1 apareceu novamente) A partir disso, podemos
+                                estabelecer
+                                várias relações nas divisões inteiras com base na seguinte notação:
+                            </p>
+                            <span style="display: block; text-align: center;"><b>r = d mod D </b></span>
+
+                            <br>
+                            <p>
+                                Lê-se: r é resto da divisão inteira de d por D. desse modo para r = 5 mod 4, temos que r
+                                = 1, pois 5 = 4 &times; 1 + 1.
+                                É justamente isso que a aritmética modular estuda: As divisões com resto.
+                            </p>
+                            <figure>
+                                <img src="./img/relogio.png" alt="Imagem de relógio">
+                                <figcaption>Esquema do funcionamento da repetição de números em um relógio</figcaption>
+                            </figure>
+                        </section>
+
+                        <section id="desenvolvimento">
+                            <br>
+                            <h2>PEQUENO TEOREMA DE FERMAT</h2>
+                            <p>
+                                Fermat, matemático Francês desenvolveu uma relação da aritmética modular com números
+                                primos de forma semelhante a uma equação. Seja n, p &isin; &#8484; Temos:
+                            </p><br>
+                            <span style="display: block; text-align: center;">
+                                <strong>n &Congruent; n<sup>p </sup>(mod p)</strong><br>
+                            </span>
+                            <p>
+                                Lê-se: n é congruente a n elevado a p módulo p. A importância dessa relação se deve ao
+                                fato de deixar de forma explícita a relação abordada
+                                anteriormente (repetição de números como em um relógio), pois indica que n -
+                                n<sup>p</sup> é divisível por p, como pode-se ver a seguir:
+                            </p>
+                            <ul> <!-- Lista de exemplos -->
+                                <li>2 + 1 ≡ 2<sup>5</sup> + 1 (mod 5) &rArr; 3 ≡ 33 &rArr; 3 ≡ 33 (mod 5) &rArr; ambos ≡
+                                    3 (mod 5)
+                                </li>
+                                <li>3 + 2 ≡ 3<sup>7</sup> + 2 (mod 7) &rArr; 5 ≡ 2189 &rArr; 5 ≡ 2189 (mod 7) &rArr;
+                                    ambos ≡ 5 (mod 7)
+                                </li>
+                                <li>4 + 1 ≡ 4<sup>3</sup> + 1 (mod 3) &rArr; 5 ≡ 65 &rArr; 5 ≡ 65 (mod 3) &rArr; ambos ≡
+                                    2 (mod 3)
+                                </li>
+                                <li>5 + 2 ≡ 5<sup>7</sup> + 2 (mod 7) &rArr; 7 ≡ 78127 &rArr; 7 ≡ 78127 (mod 7) &rArr;
+                                    ambos ≡ 0 (mod 7)
+                                </li>
+                                <li>6 + 1 ≡ 6<sup>5</sup> + 1 (mod 5) &rArr; 7 ≡ 7777 &rArr; 7 ≡ 7777 (mod 5) &rArr;
+                                    ambos ≡ 2 (mod 5)
+                                </li>
+                            </ul>
+                            <br>
+                            <h2><b>Outra relação</b></h2>
+                            <p>
+                                podemos simplificar o teorema da seguinte maneira: n &Congruent; n<sup>p </sup>(mod p)
+                                &rArr; 1 &Congruent; n<sup>p-1 </sup>(mod p).
+                                No entanto, isso não é válido quando a é múltiplo de p, por exemplo: 6 &Congruent;
+                                6<sup>3 </sup>(mod 3) &rArr; 1 &Congruent;
+                                6<sup>2 </sup>(mod 3). Ou seja 3 é divisor de 35 (falso)
+                            </p><br>
+                        </section>
+
+                        <section id="demonstracao"><!-- Demonstração -->
+
+                            <h2><b> Demonstração</b></h2>
+                            <p>Utilizaremos um método chamado de PIF (princípio da indução finita) muito famoso quando
+                                se trata da resolução de conjecturas</p>
+                            <h3>Passo base do princípio da indução finita (PIF)</h3>
+                            <p>
+                                n &Congruent; n<sup>p </sup>(mod p) vale para k, ou seja k &Congruent; k<sup>p
+                                </sup>(mod p) e que p | k - k<sup>p </sup> (p é divisor)</p>
+                            <h3>Passo indutivo</h3>
+                            <p>
+                                Temos que provar para k + 1 (de acordo com o método do PIF) logo presumimos que: p | k +
+                                1 - (k + 1)<sup>p </sup>. Pois se vale para um K genérico e para um
+                                K + 1 genérico, logo, vale para todos desse modo, utilizando numero binomial de newton
+                                temos: <br><br>
+                                p | k + 1 -
+                            </p>
+                            <p>
+                                &#8721;
+                                <math xmlns="http://www.w3.org/1998/Math/MathML"> <!-- construção do numero binomial -->
                                     <mrow>
-                                        <mi>p</mi>
+                                        <mo>(</mo>
+                                        <mfrac linethickness="0">
+                                            <mrow>
+                                                <mi>p</mi>
+                                            </mrow>
+                                            <mrow>
+                                                <mi>i</mi>
+                                            </mrow>
+                                        </mfrac>
+                                        <mo>)</mo>
                                     </mrow>
-                                    <mrow>
-                                        <mi>i</mi>
-                                    </mrow>
-                                </mfrac>
-                                <mo>)</mo>
-                            </mrow>
-                        </math>
-                        k<sup>p-i </sup> &times; 1
-                        (para i variando de 0 a P) &rArr; p | k + 1 -
+                                </math>
+                                k<sup>p-i </sup> &times; 1
+                                (para i variando de 0 a P) &rArr; p | k + 1 -
 
-                        <span style="font-size: 40px;">[</span>k<sup>p</sup> &times; 1<sup>0</sup> +
-                        <!-- construção de frações -->
-                        <span>
-                            <math xmlns="http://www.w3.org/1998/Math/MathML">
-                                <mfrac>
-                                    <mi>p!</mi>
-                                    <mi>1! &times; (p - 1)!</mi>
-                                </mfrac>
-                            </math>
-                            &times; k<sup>p - 1</sup> &times 1 <sup>1</sup>
-                        </span>
-                        + ... +
+                                <span style="font-size: 40px;">[</span>k<sup>p</sup> &times; 1<sup>0</sup> +
+                                <!-- construção de frações -->
+                                <span>
+                                    <math xmlns="http://www.w3.org/1998/Math/MathML">
+                                        <mfrac>
+                                            <mi>p!</mi>
+                                            <mi>1! &times; (p - 1)!</mi>
+                                        </mfrac>
+                                    </math>
+                                    &times; k<sup>p - 1</sup> &times 1 <sup>1</sup>
+                                </span>
+                                + ... +
 
-                        <span> <!-- construção de frações -->
-                            <math xmlns="http://www.w3.org/1998/Math/MathML">
-                                <mfrac>
-                                    <mi>p!</mi>
-                                    <mi>(p - 1)! &times; (1)!</mi>
-                                </mfrac>
-                            </math> &times; k<sup>1</sup> &times 1 <sup>p - 1</sup>
-                        </span>
-                        +
-                        k<sup>0</sup> &times; 1<sup>p</sup><span style="font-size: 40px;">]</span><br><br> (os números
-                        binomiais já estão calculados para facilitar).
-                        perceba que ao tirarmos k<sup>p</sup> e o 1<sup>p</sup> dos colchetes o seguinte ocorre:
-                        <br><br>
-                        p | k + 1 - k<sup>p</sup> - 1<sup>p</sup> -
+                                <span> <!-- construção de frações -->
+                                    <math xmlns="http://www.w3.org/1998/Math/MathML">
+                                        <mfrac>
+                                            <mi>p!</mi>
+                                            <mi>(p - 1)! &times; (1)!</mi>
+                                        </mfrac>
+                                    </math> &times; k<sup>1</sup> &times 1 <sup>p - 1</sup>
+                                </span>
+                                +
+                            </p>
+                            <p>
+                                k<sup>0</sup> &times; 1<sup>p</sup><span style="font-size: 40px;">]</span><br><br> (os
+                                números binomiais já estão calculados para facilitar).
+                                perceba que ao tirarmos k<sup>p</sup> e o 1<sup>p</sup> dos colchetes o seguinte ocorre:
+                                <br><br>
+                                p | k + 1 - k<sup>p</sup> - 1<sup>p</sup> -
 
-                        <span style="font-size: 40px;">[</span>
-                        <span> <!-- construção de frações -->
-                            <math xmlns="http://www.w3.org/1998/Math/MathML">
-                                <mfrac>
-                                    <mi>p!</mi>
-                                    <mi>1! &times; (p - 1)!</mi>
-                                </mfrac>
-                            </math>
-                            &times; k<sup>p - 1</sup> &times 1 <sup>1</sup> + ... +
-                            <math xmlns="http://www.w3.org/1998/Math/MathML">
-                                <mfrac>
-                                    <mi>p!</mi>
-                                    <mi>(p - 1)! &times; (1)!</mi>
-                                </mfrac>
-                            </math> &times; k<sup>1</sup> &times 1 <sup>p - 1</sup>
-                        </span>
-                        <span style="font-size: 40px;">]</span>
+                                <span style="font-size: 40px;">[</span>
+                                <span> <!-- construção de frações -->
+                                    <math xmlns="http://www.w3.org/1998/Math/MathML">
+                                        <mfrac>
+                                            <mi>p!</mi>
+                                            <mi>1! &times; (p - 1)!</mi>
+                                        </mfrac>
+                                    </math>
+                                    &times; k<sup>p - 1</sup> &times 1 <sup>1</sup> + ... +
+                                    <math xmlns="http://www.w3.org/1998/Math/MathML">
+                                        <mfrac>
+                                            <mi>p!</mi>
+                                            <mi>(p - 1)! &times; (1)!</mi>
+                                        </mfrac>
+                                    </math> &times; k<sup>1</sup> &times 1 <sup>p - 1</sup>
+                                </span>
+                                <span style="font-size: 40px;">]</span>
 
-                        &rArr;<b> p | k - k<sup>p</sup></b> -p &times; <!-- construção de frações -->
-                        <span style="font-size: 40px;">[</span><span>
-                            <math xmlns="http://www.w3.org/1998/Math/MathML">
-                                <mfrac>
-                                    <mi>(p - 1)!</mi>
-                                    <mi>1! &times; (p - 1)!</mi>
-                                </mfrac>
-                            </math>
-                            &times; k<sup>p - 1</sup> &times 1 <sup>1</sup> + ... +
-                            <math xmlns="http://www.w3.org/1998/Math/MathML">
-                                <mfrac>
-                                    <mi>(p - 1)!</mi>
-                                    <mi>(p - 1)! &times; (1)!</mi>
-                                </mfrac>
-                            </math> &times; k<sup>1</sup> &times 1 <sup>p - 1</sup>
-                        </span>
-                        <span style="font-size: 40px;">]</span><br><br>
+                                &rArr;<b> p | k - k<sup>p</sup></b> -p &times; <!-- construção de frações -->
+                                <span style="font-size: 40px;">[</span><span>
+                                    <math xmlns="http://www.w3.org/1998/Math/MathML">
+                                        <mfrac>
+                                            <mi>(p - 1)!</mi>
+                                            <mi>1! &times; (p - 1)!</mi>
+                                        </mfrac>
+                                    </math>
+                                    &times; k<sup>p - 1</sup> &times 1 <sup>1</sup> + ... +
+                                    <math xmlns="http://www.w3.org/1998/Math/MathML">
+                                        <mfrac>
+                                            <mi>(p - 1)!</mi>
+                                            <mi>(p - 1)! &times; (1)!</mi>
+                                        </mfrac>
+                                    </math> &times; k<sup>1</sup> &times 1 <sup>p - 1</sup>
+                                </span>
+                                <span style="font-size: 40px;">]</span><br><br>
+                            </p>
+                            <p>
+                                Como k - k<sup>p</sup></b> já foi assumido como verdade (p | k - k <sup>p</sup>) e a
+                                expressão fatorada <br><br>
+                                -p &times;
+                                <span style="font-size: 40px;">[</span> <!-- construção de frações -->
+                                <span>
+                                    <math xmlns="http://www.w3.org/1998/Math/MathML">
+                                        <mfrac>
+                                            <mi>(p - 1)!</mi>
+                                            <mi>1! &times; (p - 1)!</mi>
+                                        </mfrac>
+                                    </math>
+                                    &times; k<sup>p - 1</sup> &times 1 <sup>1</sup> + ... +
+                                    <math xmlns="http://www.w3.org/1998/Math/MathML">
+                                        <mfrac>
+                                            <mi>(p - 1)!</mi>
+                                            <mi>(p - 1)! &times; (1)!</mi>
+                                        </mfrac>
+                                    </math> &times; k<sup>1</sup> &times 1 <sup>p - 1</sup>
+                                </span>
+                                <span style="font-size: 40px;">]</span><br><br>
 
-                        Como k - k<sup>p</sup></b> -p &times; já foi assumido como verdade e a expressão fatorada
-                        <br><br>
-                        <span style="font-size: 40px;">[</span> <!-- construção de frações -->
-                        <span>
-                            <math xmlns="http://www.w3.org/1998/Math/MathML">
-                                <mfrac>
-                                    <mi>(p - 1)!</mi>
-                                    <mi>1! &times; (p - 1)!</mi>
-                                </mfrac>
-                            </math>
-                            &times; k<sup>p - 1</sup> &times 1 <sup>1</sup> + ... +
-                            <math xmlns="http://www.w3.org/1998/Math/MathML">
-                                <mfrac>
-                                    <mi>(p - 1)!</mi>
-                                    <mi>(p - 1)! &times; (1)!</mi>
-                                </mfrac>
-                            </math> &times; k<sup>1</sup> &times 1 <sup>p - 1</sup>
-                        </span>
-                        <span style="font-size: 40px;">]</span><br><br>
-
-                        contém um fator P (no caso -P) logo a expressão como um todo é divisível por
-                        P e acabamos de demonstrar o pequeno teorema de fermat!
-                    </p>
-                </article>
+                                contém um fator P (no caso -P) logo a expressão como um todo é divisível por
+                                P e acabamos de demonstrar o pequeno teorema de fermat!
+                            </p>
+                        </section>
+                    </article>
+                </div>
             </div>
         </main>
     </div>
 </body>
-<footer>
-
-</footer>
 
 </html>

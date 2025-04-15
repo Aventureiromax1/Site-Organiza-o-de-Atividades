@@ -7,21 +7,26 @@ body {
     width: 100%;
     height: 100dvh;
     font-family: "DM Sans Regular";
+}
 
+:root {
     /*cores light theme*/
 
     /*layout padrao*/
-    --bg-color: #9b9b9b;
+    --bg-color: #d6d5d5;
     --bg-navbar-1: #494949;
     --bg-navbar-2: #000000;
     --bd-nav: #30353a;
     --text-color: #000000;
+    --bd-shadow-activities: #3d3d3d;
     /*botoes*/
     --bg-home: #deb887;
-    --bd-home-hover: #deb887c4;
-    --bd-default: #535f6d;
-    --bg-SubjectsBtn: #cede87;
-    --bg-subjectsBtn-hover: #cede87c4;
+    --bg-homeText: black;
+    --bd-home-hover: #6b6b6bc4;
+    --bd-default: #3d3d3d;
+    --bg-SubjectsBtn: #000000;
+    --bg-SubjectsBtnText: #deb887;
+    --bg-subjectsBtn-hover: #6b6b6bc4;
     /*aside*/
     --bg-aside: #c4c4c4;
     --bd-aside: #717d8b;
@@ -31,6 +36,7 @@ body {
     /*activity*/
     --bg-activities: #deb887;
     /*profile*/
+    --bg-profile-btn: #deb887;
     --bg-usercard: #ffffff9a;
     --bd-usercard: #979797;
     /*textos*/
@@ -43,6 +49,7 @@ body {
     /*conteudos*/
     --bg-contents-aside-subjects: #727272;
     --bg-contents-main: #dadada;
+    --subject-shadow: 0 4px 8px rgba(0, 0, 0, 1.0);
     /*materias bg*/
     --sun-color: #ffe02f;
 }
@@ -54,13 +61,16 @@ body {
     --bg-navbar-2: #121212;
     --bd-nav: #333840;
     --text-color: #e1e1e1;
-
+    --bd-shadow-activities: #918f8f;
     /* botões */
-    --bg-home: #a97444;
+    --bg-home: #0f0720;
     --bg-home-hover: #a97444cc;
+    --bg-homeText: white;
     --bd-default: #6c6c6c;
-    --bg-SubjectsBtn: #9aa64c;
-    --bg-subjectsBtn-hover: #9aa64ccc;
+    --bd-default: #1a0a3d;
+    --bg-SubjectsBtn: #dadada;
+    --bg-SubjectsBtnText: #0f0720;
+    --bg-subjectsBtn-hover: #6c6c6c;
 
     /* aside */
     --bg-aside: #2a2a2a;
@@ -70,9 +80,10 @@ body {
     --bg-aside-hover-green: #5fc94ccc;
 
     /*activity*/
-    --bg-activities: #002147;
+    --bg-activities: #110d18;
 
     /* profile */
+    --bg-profile-btn: #dadada;
     --bg-usercard: #2e2e2e99;
     --bd-usercard: #5a5a5a;
 
@@ -87,12 +98,14 @@ body {
     /* conteúdos */
     --bg-contents-aside-subjects: #3b3b3b;
     --bg-contents-main: #2f2f2f;
+    --subject-shadow: 0 4px 8px #ffffff;
     /*materias bg*/
     --sun-color: #c5c5c5;
 }
 
 nav {
-    display: flex;
+    top: 10px;
+    position: sticky;
     flex-direction: row;
     display: block;
     width: 99%;
@@ -107,7 +120,8 @@ nav {
     justify-content: flex-start;
     align-items: center;
     box-sizing: border-box;
-    gap: 5px;
+    flex-wrap: nowrap;
+    gap: 20px;
     padding: 6px;
     margin: auto;
 }
@@ -120,31 +134,32 @@ body .container {
     display: flex;
     width: 100px;
     height: 50px;
+    color: var(--bg-homeText);
     background-color: var(--bg-home);
     border: 3px solid var(--bd-default);
     border-radius: 8px;
     align-items: center;
     justify-content: center;
-    animation-name: startAnimation1;
-    animation-duration: 0.5s;
+    animation: Startanimation1 0.5s;
     overflow: hidden;
+    cursor: pointer;
 }
 
 .home button {
     position: absolute;
     height: 50px;
     width: 100px;
-    opacity: 100;
-    z-index: 9999;
+    opacity: 1;
+    z-index: 1;
 }
 
 .button {
     position: absolute;
     height: 50px;
     width: 100px;
-    opacity: 100;
-    z-index: 9999;
+    opacity: 1;
     cursor: pointer;
+    z-index: 1;
 }
 
 .Pbutton {
@@ -152,9 +167,9 @@ body .container {
     height: 50px;
     width: 50px;
     border-radius: 50%;
-    opacity: 100;
-    z-index: 9999;
+    opacity: 1;
     cursor: pointer;
+    z-index: 1;
 }
 
 .home:hover {
@@ -173,20 +188,20 @@ body .container {
     height: 50px;
     background-color: var(--bg-SubjectsBtn);
     border: 3px solid var(--bd-default);
+    color: var(--bg-SubjectsBtnText);
     border-radius: 5px;
     align-items: center;
     justify-content: center;
-    animation-name: startAnimation1;
+    animation-name: StartAnimation1;
     animation-duration: 0.5s;
     overflow: hidden;
 }
 
 .SubjectsContents:hover {
     background-color: var(--bg-subjectsBtn-hover);
-
 }
 
-.SubjectsContents h1 {
+.SubjectsContents h2 {
     text-align: center;
     margin: 0;
     flex-wrap: nowrap;
@@ -197,14 +212,14 @@ body .container {
     right: 20px;
     width: 50px;
     height: 50px;
-    background-color: var(--bg-home);
+    background-color: var(--bg-profile-btn);
     border: 3px solid var(--bd-default);
     border-radius: 50%;
     background-image: url(../img/userico.png);
     background-size: 80%;
     background-position: center;
     background-repeat: no-repeat;
-    animation-name: startAnimation1;
+    animation-name: StartAnimation1;
     animation-duration: 0.5s;
 }
 
@@ -213,182 +228,82 @@ body .container {
     height: 50px;
     border-radius: 50%;
     opacity: 0.1;
-    z-index: 9999;
 }
 
 .profile:hover {
-    background-color: var(--bd-home-hover);
+    background-color: var(--bg-profile-btn);
 
-}
-
-.profile img:hover {
-    filter: invert(100%);
 }
 
 /*HEADER*/
 
 /*BODY*/
 
-aside [class^="sidebar"] {
-    --sidebar-width: 20px;
-    /* Default collapsed width */
-    --sidebar-width-expand: 100px;
-    /* Expanded width on hover */
-    width: var(--sidebar-width);
-    /* Use the default width */
-    height: 160px;
-    user-select: none;
-    justify-content: flex-start;
-    align-items: flex-start;
-    background-color: rgb(0, 0, 0);
-    border: 3px solid rgb(87, 90, 94);
-    border-radius: 8px;
-    padding: 3px;
-    transition: width 0.3s ease-in-out, background-color 0.3s ease-in-out;
-    /* Sync transitions */
-}
-
-aside .sidebar:hover {
-    width: var(--sidebar-width-expand);
-    /* Expand the sidebar on hover */
-    background-color: white;
-    /* Optional hover background color */
-}
-
-aside [id^="selbtn"] {
-    display: flex;
-    width: var(--sidebar-width);
-    /* Match the sidebar's width */
-    height: 50px;
-    background-color: rgb(189, 189, 189);
-    border: 3px solid rgb(83, 95, 109);
-    border-radius: 8px;
-    align-self: auto;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 5px;
-    box-sizing: border-box;
-    overflow: hidden;
-    transition: width 0.3s ease-in-out, background-color 0.3s ease-in-out;
-    /* Sync transitions */
-}
-
-aside [id^="selbtn"] p {
-    opacity: 0;
-    font-weight: bold;
-    white-space: nowrap;
-    overflow: hidden;
-    margin: 0;
-    transition: opacity 0.3s ease-in-out;
-}
-
-aside [class^="sidebar"]:hover [id^="selbtn"] {
-    width: var(--sidebar-width-expand);
-    background-color: rgba(143, 138, 138, 0.8);
-    opacity: 1;
-}
-
-aside [class^="sidebar"]:hover [id^="selbtn"] p {
-    opacity: 1;
-}
-
-aside [id^="selbtn"]:first-child:hover {
-    background-color: rgba(224, 94, 94, 0.8);
-}
-
-aside [id^="selbtn"]:last-child:hover {
-    background-color: rgba(131, 224, 94, 0.8);
-}
-
-aside [id^="selbtn"]:nth-child(2):hover {
-    background-color: rgba(252, 124, 5, 0.8);
-}
-
-@media (min-width: 1152px) {
-    aside [class^="sidebar"] {
-        width: var(--sidebar-width-expand);
-        /* Use the expanded width */
-    }
-
-    aside [id^="selbtn"] {
-        width: var(--sidebar-width-expand);
-        /* Match the expanded sidebar width */
-    }
-
-    aside [class^="sidebar"] [id^="selbtn"] p {
-        opacity: 1;
-
-    }
-
-    aside [id^="selbtn"]:first-child {
-        background-color: var(--bg-aside-hover-red);
-    }
-
-    aside [id^="selbtn"]:last-child {
-        background-color: var(--bg-aside-hover-green);
-
-    }
-}
 
 /*Section*/
+
+
 section .activity {
     display: flex;
-    width: 100%;
-    height: 30px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100dvw;
     flex-wrap: wrap;
-    justify-content: flex-start;
+}
+
+section h2 {
+    color: var(--text-color);
+    font-size: xx-large;
+    text-align: center;
 }
 
 section .activity>[id] {
-    margin: 10px;
+    margin-top: 25px;
+    margin-bottom: 25px;
     width: 300px;
     max-width: 600px;
     max-height: 200px;
     height: 100px;
     background-color: var(--bg-home);
-    box-shadow: 8px var(--bd-default);
-    border: 4px solid var(--bd-default);
+    border: 2px solid var(--bd-default);
     border-radius: 4px;
+    box-shadow: var(--bd-shadow-activities) 0px 0px 10px;
     justify-content: flex-start;
     align-items: center;
     position: relative;
     overflow: hidden;
     transition: 0.2s ease-in-out;
+    scale: 1.3;
 }
 
-section .activity>[id] {
-    background-color: #002147;
-}
+
 
 section .activity>[id] p {
-    z-index: 9999;
+    z-index: 5;
     position: absolute;
 }
 
 .dark section .activity [id] p {
     color: var(--text-color);
-    -webkit-text-stroke-width: 2px;
-    -webkit-text-stroke-color: #000;
 }
 
 section .activity>[id]:hover {
     border-radius: 8px;
-    border: 6px solid var(--bd-default);
-    scale: 1.1;
+    border: 8px solid var(--bd-default);
+    scale: 1.35;
 }
 
 section .activity>[id] a {
     width: 100%;
     height: 100%;
-    z-index: 9999;
-    background-color: turquoise;
+    position: absolute;
+    z-index: 6;
 }
 
-@keyframes startAnimation1 {
+@keyframes StartAnimation1 {
     from {
         opacity: 0;
         width: 0px;
     }
-
-    to {}
 }

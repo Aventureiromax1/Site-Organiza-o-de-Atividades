@@ -4,7 +4,6 @@
 <head>
     <link rel="stylesheet" href="./css/contents.css">
     <link rel="stylesheet" href="./css/index.css">
-    <link rel="stylesheet" href="./css/background.css">
     <script src="./javascript/index.js"></script>
     <script src="./javascript/contents.js" defer></script>
     <meta charset="UTF-8">
@@ -21,12 +20,9 @@
 <body>
     <nav>
         <div class="container">
-            <div class="tab">
-                <button type="button" onclick="toggleAside()"></button>
-            </div>
             <div class="home">
                 <a href="index.html" class="button"></a>
-                <h1>home</h1>
+                <h2>home</h2>
             </div>
             <div class="profile">
                 <a href="profile.html" class="Pbutton"></a>
@@ -36,14 +32,40 @@
     <div class="container">
         <main>
             <div class="contents">
+                <div id="contents-title">
+                    <h1><strong>PREVIEW DAS PÁGINAS DE CONTEÚDO</strong></h1>
+                </div>
+
+                <h2 class="iframe-title">Matemática: Aritimética modular</h2>
                 <div class="iframeSubject">
+
+                    <iframe src="math.html" class="iframe" onload="filtrarIframe()" scrolling="no"></iframe>
+                    <div class="iframeSubjectBar"></div>
+                </div>
+
+                <h2 class="iframe-title">Portugues: Movimentos literários e nacionalismo</h2>
+                <div class="iframeSubject">
+
+                    <iframe src="portuguese.html" class="iframe" onload="filtrarIframe()" scrolling="no"></iframe>
+                    <div class="iframeSubjectBar"></div>
+                </div>
+
+                <h2 class="iframe-title">História: Segunda guerra mundial</h2>
+                <div class="iframeSubject">
+
+                    <iframe src="history.html" class="iframe" onload="filtrarIframe()" scrolling="no"></iframe>
+                    <div class="iframeSubjectBar"></div>
+                </div>
+
+                <h2 class="iframe-title">Geografia: Pedologia</h2>
+                <div class="iframeSubject">
+
+                    <iframe src="geography.html" class="iframe" onload="filtrarIframe()" scrolling="no"></iframe>
                     <div class="iframeSubjectBar"></div>
                 </div>
             </div>
         </main>
     </div>
 </body>
-<footer>
-</footer>
 
 </html>

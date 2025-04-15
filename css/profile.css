@@ -1,11 +1,3 @@
-body {
-  --bg-usercard: #ffffff9a;
-  --bd-usercard: #979797;
-  --input-lbl: #646464;
-  --input-bg: #d8d8d8;
-  --input-bd-hover: #9696c8;
-}
-
 main {
   background-color: var(--bg-color);
   display: flex;
@@ -17,7 +9,7 @@ main {
 main .usercard {
   width: 300px;
   height: 600px;
-  border-radius: 64px;
+  border-radius: 34px;
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -39,7 +31,7 @@ main .usercard>img {
 }
 
 main .usercard:hover {
-  scale: 1.04;
+  transform: scale(1.04);
   box-shadow: 0 0 100px 2px #00c3ff;
 }
 
@@ -60,7 +52,7 @@ main .usercard:hover {
 }
 
 .inputGroup input {
-  font-size: 100%;
+  font-size: 1rem;
   padding: 0.8em;
   outline: none;
   border: 2px solid var(--bd-usercard);
@@ -69,8 +61,12 @@ main .usercard:hover {
   width: 86%;
 }
 
+.dark .inputGroup input {
+  color: var(--input-lbl);
+}
+
 .inputGroup>label {
-  font-size: 100%;
+  font-size: 1rem;
   position: absolute;
   left: 0;
   top: 0;
@@ -99,7 +95,7 @@ main .usercard:hover {
 }
 
 .inputGroup a button {
-  font-size: 100%;
+  font-size: 1rem;
   padding: 0.8em;
   outline: none;
   border: 2px solid var(--bd-usercard);
@@ -112,11 +108,6 @@ main .usercard:hover {
 .inputGroup a button:hover {
   background-color: var(--bg-usercard);
   border-color: var(--input-bd-hover);
-}
-
-.inputGroup input:valid~button:enabled {
-  background-color: #a7ff91;
-  border-color: var(--input-bd-hover)
 }
 
 .Pbottom {
